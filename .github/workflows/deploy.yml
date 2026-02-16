@@ -1,0 +1,73 @@
+name: CI/CD Deploy via Domestic Git Mirror
+
+# 触发条件：推送到 main 分支 或 手动触发
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+env:
+  TZ: Asia/Shanghai
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. 拉取你的博客源码
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      # 2. 安装 pnpm
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 9
+
+      # 3. 设置 Node.js 环境
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+
+      # 4. 安装依赖
+      - name: Install dependencies
+        run: pnpm install
+
+      # 5. 构建静态文件 (Fuwari 输出目录默认为 dist)
+      - name: Build site
+        run: pnpm build
+
+      # 6. 推送构建产物到国内镜像仓库 (CNB示例)
+      - name: Push to Domestic Git Mirror (CNB)
+        run: |
+          cd ./dist
+          git init
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add .
+          git commit -m "Deploy from GitHub Action: ${{ github.event.head_commit.message }}"
+          git branch -M main
+          # 使用 Secrets 中的用户名和Token推送到CNB
+          git remote add origin "https://${{ secrets.CNB_USERNAME }}:${{ secrets.CNB_TOKEN }}@cnb.cool/ZhX589/blog-static"
+          git push --force --quiet origin main
+        # 如果使用 Gitee，则替换为：
+        # git remote add origin "https://你的Gitee用户名:${{ secrets.GITEE_TOKEN }}@gitee.com/你的用户名/blog-static.git"
+
+      # 7. SSH连接服务器，执行 git pull 更新
+      - name: SSH into server and git pull
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22  # 如非默认22端口请修改
+          script: |
+            cd /opt/1panel/www/sites/zhx-blog.top/index  # 请替换为你的1Panel网站实际目录！
+            # 防止目录所有者警告 [citation:5]
+            git config --global --add safe.directory "$(pwd)"
+            # 拉取国内镜像仓库的最新更新（只拉取最新记录，节省空间和时间）[citation:5]
+            git fetch --all --depth=1
+            git reset --hard origin/main
+            git pull --depth=1
+            echo "✅ 博客已从国内镜像仓库更新完成"
