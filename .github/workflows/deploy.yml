@@ -55,19 +55,18 @@ jobs:
         # git remote add origin "https://你的Gitee用户名:${{ secrets.GITEE_TOKEN }}@gitee.com/你的用户名/blog-static.git"
 
       # 7. SSH连接服务器，执行 git pull 更新
-      - name: SSH into server and git pull
+      - name: 服务器执行拉取命令
         uses: appleboy/ssh-action@v1
         with:
           host: ${{ secrets.SERVER_IP }}
-          username: ${{ secrets.SERVER_USER }}
+          username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: 22  # 如非默认22端口请修改
+          port: 22
           script: |
-            cd /opt/1panel/www/sites/zhx-blog.top/index  # 请替换为你的1Panel网站实际目录！
-            # 防止目录所有者警告 [citation:5]
+            cd /opt/1panel/www/sites/zhx-blog.top/index
             git config --global --add safe.directory "$(pwd)"
-            # 拉取国内镜像仓库的最新更新（只拉取最新记录，节省空间和时间）[citation:5]
             git fetch --all --depth=1
             git reset --hard origin/main
             git pull --depth=1
-            echo "✅ 博客已从国内镜像仓库更新完成"
+            echo "✅ 已拉取 page 分支最新内容"
+
