@@ -1,9 +1,31 @@
-# About
-This is the demo site for [Fuwari](https://github.com/saicaca/fuwari).
+# 关于
 
-::github{repo="saicaca/fuwari"}
+![封面图](cover.png)
 
-> ### Sources of images used in this site
-> - [Unsplash](https://unsplash.com/)
-> - [星と少女](https://www.pixiv.net/artworks/108916539) by [Stella](https://www.pixiv.net/users/93273965)
-> - [Rabbit - v1.4 Showcase](https://civitai.com/posts/586908) by [Rabbit_YourMajesty](https://civitai.com/user/Rabbit_YourMajesty)
+<figcaption>封面图：来自小石头在明月山拍摄，使用AIGC工具适当修改</figcaption>
+
+你好呀，欢迎来到小石崽的小窝。
+
+小石崽，是“小石头”在二次元世界里的投影，现实里的我大概是个普通高中生，喜欢写代码，会胡思乱想，也会在夜里突然觉得世界很大。
+
+这个网站想记录一些正在发生的事情：
+
+- 计算机相关的学习笔记
+- 算法和代码的碎碎念
+- 偶尔写点散文
+- 以及一些不太成熟、但很认真的思考
+
+我曾经是个 OIer（已经退役啦），现在还在慢慢学算法。  
+会写一点 Python，偶尔做点小项目（当然以我这菜鸟水平……）。
+
+技术对我来说，不只是工具。它像一种可以抓住的秩序：  
+在很多事情都说不清的时候，  
+至少代码是讲逻辑的。
+
+至于“石头”这个名字——  
+大概是希望自己稳一点吧。
+
+如果你愿意路过这里，  
+那就一起慢慢长大吧。
+
+谢谢啦！
