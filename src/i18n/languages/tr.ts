@@ -35,4 +35,8 @@ export const tr: Translation = {
 	[Key.author]: "Yazar",
 	[Key.publishedAt]: "Yayınlanma:",
 	[Key.license]: "Lisans",
+
+	[Key.notFoundTitle]: "Sayfa Bulunamadı",
+	[Key.notFoundDesc]: "Üzgünüz, aradığınız sayfa mevcut değil",
+	[Key.backToHome]: "Ana Sayfaya Dön",
 };

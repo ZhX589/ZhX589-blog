@@ -35,4 +35,8 @@ export const vi: Translation = {
 	[Key.author]: "Tác giả",
 	[Key.publishedAt]: "Đăng vào lúc",
 	[Key.license]: "Giấy phép bản quyền",
+
+	[Key.notFoundTitle]: "Không Tìm Thấy Trang",
+	[Key.notFoundDesc]: "Xin lỗi, trang bạn tìm kiếm không tồn tại",
+	[Key.backToHome]: "Về Trang Chủ",
 };

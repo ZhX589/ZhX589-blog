@@ -35,4 +35,8 @@ export const zh_TW: Translation = {
 	[Key.author]: "作者",
 	[Key.publishedAt]: "發佈於",
 	[Key.license]: "許可協議",
+
+	[Key.notFoundTitle]: "頁面未找到",
+	[Key.notFoundDesc]: "抱歉，您訪問的頁面不存在",
+	[Key.backToHome]: "返回首頁",
 };

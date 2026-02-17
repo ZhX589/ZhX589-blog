@@ -32,6 +32,10 @@ enum I18nKey {
 	author = "author",
 	publishedAt = "publishedAt",
 	license = "license",
+
+	notFoundTitle = "notFoundTitle",
+	notFoundDesc = "notFoundDesc",
+	backToHome = "backToHome",
 }
 
 export default I18nKey;
