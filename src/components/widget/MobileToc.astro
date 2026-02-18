@@ -1,0 +1,231 @@
+---
+import type { MarkdownHeading } from "astro";
+import { Icon } from "astro-icon/components";
+import { siteConfig } from "../../config";
+
+interface Props {
+	headings: MarkdownHeading[];
+}
+
+let { headings = [] } = Astro.props;
+
+let minDepth = 10;
+for (const heading of headings) {
+	minDepth = Math.min(minDepth, heading.depth);
+}
+
+const removeTailingHash = (text: string) => {
+	let lastIndexOfHash = text.lastIndexOf("#");
+	if (lastIndexOfHash !== text.length - 1) {
+		return text;
+	}
+	return text.substring(0, lastIndexOfHash);
+};
+
+const filteredHeadings = headings.filter((heading) => heading.depth < minDepth + siteConfig.toc.depth);
+
+let h1Counter = 0;
+---
+{headings.length > 0 &&
+<div class="mobile-toc-wrapper lg:hidden">
+    <button id="mobile-toc-btn" class="mobile-toc-btn" aria-label="Table of Contents">
+        <Icon name="material-symbols:toc-rounded" class="text-[1.5rem]"></Icon>
+    </button>
+</div>
+
+<div id="mobile-toc-overlay" class="mobile-toc-overlay"></div>
+
+<div id="mobile-toc-drawer" class="mobile-toc-drawer">
+    <div class="flex items-center justify-between p-4 border-b border-[var(--line-divider)]">
+        <h2 class="text-lg font-bold text-75">目录</h2>
+        <button id="mobile-toc-close" class="btn-plain rounded-lg w-10 h-10" aria-label="Close">
+            <Icon name="material-symbols:close-rounded" class="text-[1.25rem]"></Icon>
+        </button>
+    </div>
+    <div class="mobile-toc-content p-4 overflow-y-auto">
+        {filteredHeadings.map((heading) => {
+            const isH1 = heading.depth === minDepth;
+            if (isH1) h1Counter++;
+            const currentH1Count = h1Counter;
+            
+            return (
+                <a href={`#${heading.slug}`} class="mobile-toc-item" data-depth={heading.depth - minDepth}>
+                    <div class:list={["mobile-toc-badge", 
+                        isH1 ? "bg-[var(--toc-badge-bg)] text-[var(--btn-content)]" : "",
+                        heading.depth === minDepth + 1 ? "ml-3" : "",
+                        heading.depth === minDepth + 2 ? "ml-6" : ""
+                    ]}>
+                        {isH1 ? currentH1Count : 
+                         heading.depth === minDepth + 1 ? <div class="w-1.5 h-1.5 rounded-sm bg-[var(--toc-badge-bg)]"></div> : 
+                         <div class="w-1 h-1 rounded-sm bg-black/20 dark:bg-white/20"></div>}
+                    </div>
+                    <span class:list={["mobile-toc-text",
+                        heading.depth === minDepth + 2 ? "text-30" : "text-50"
+                    ]}>{removeTailingHash(heading.text)}</span>
+                </a>
+            );
+        })}
+    </div>
+</div>
+}
+
+<style is:global>
+.mobile-toc-wrapper {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 5rem;
+    z-index: 40;
+    pointer-events: auto;
+}
+
+.mobile-toc-btn {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 9999px;
+    background: var(--card-bg);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.mobile-toc-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-toc-btn:active {
+    transform: scale(0.95);
+}
+
+.mobile-toc-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(2px);
+    z-index: 45;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.mobile-toc-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile-toc-drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: min(320px, 85vw);
+    background: var(--page-bg);
+    z-index: 50;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    box-shadow: -4px 0 16px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-toc-drawer.open {
+    transform: translateX(0);
+}
+
+.mobile-toc-content {
+    flex: 1;
+    max-height: calc(100vh - 4rem);
+}
+
+.mobile-toc-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.625rem 0.75rem;
+    border-radius: 0.5rem;
+    transition: background 0.15s ease;
+    margin-bottom: 0.25rem;
+}
+
+.mobile-toc-item:hover {
+    background: var(--toc-btn-hover);
+}
+
+.mobile-toc-item:active {
+    background: var(--toc-btn-active);
+}
+
+.mobile-toc-badge {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 0.375rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.mobile-toc-text {
+    font-size: 0.875rem;
+    line-height: 1.4;
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+</style>
+
+<script>
+function initMobileToc() {
+    const btn = document.getElementById('mobile-toc-btn');
+    const closeBtn = document.getElementById('mobile-toc-close');
+    const drawer = document.getElementById('mobile-toc-drawer');
+    const overlay = document.getElementById('mobile-toc-overlay');
+    
+    if (!btn || !drawer || !overlay) return;
+    
+    const openDrawer = () => {
+        drawer.classList.add('open');
+        overlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    };
+    
+    const closeDrawer = () => {
+        drawer.classList.remove('open');
+        overlay.classList.remove('open');
+        document.body.style.overflow = '';
+    };
+    
+    btn.addEventListener('click', openDrawer);
+    closeBtn?.addEventListener('click', closeDrawer);
+    overlay.addEventListener('click', closeDrawer);
+    
+    const tocLinks = drawer.querySelectorAll('.mobile-toc-item');
+    tocLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            closeDrawer();
+        });
+    });
+    
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && drawer.classList.contains('open')) {
+            closeDrawer();
+        }
+    });
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMobileToc);
+} else {
+    initMobileToc();
+}
+
+document.addEventListener('astro:page-load', initMobileToc);
+</script>
