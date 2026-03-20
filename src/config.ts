@@ -53,7 +53,7 @@ export const navBarConfig: NavBarConfig = {
 };
 
 export const profileConfig: ProfileConfig = {
-  avatar: "assets/images/小石崽2.png", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+  avatar: "assets/images/IMG_4871.JPG", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
   name: "小石头·小石崽",
   bio: "做自己的歌手，爱所爱的人，干想干的事",
   links: [
