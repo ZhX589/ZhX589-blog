@@ -45,13 +45,13 @@ export const navBarConfig: NavBarConfig = {
     LinkPreset.Archive,
     LinkPreset.About,
     {
+      name: "友链",
+      url: "/links/",
+    },
+    {
       name: "开往",
       url: "https://www.travellings.cn/typewriter.html", // Internal links should not include the base path, as it is automatically added
       external: true, // Show an external link icon and will open in a new tab
-    },
-    {
-      name: "友链",
-      url: "/links/",
     },
   ],
 };
