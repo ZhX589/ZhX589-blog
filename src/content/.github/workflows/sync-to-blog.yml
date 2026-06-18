@@ -1,0 +1,26 @@
+name: Sync Content to Blog
+
+on:
+  push:
+    branches:
+      - main # 如果你的默认分支是 master，请修改为 master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Content Repo
+      uses: actions/checkout@v4
+
+    - name: Pushes to Blog Repo
+      uses: cpina/github-action-push-to-another-repository@main
+      env:
+        # 这里需要你在内容仓库的 Settings 中配置一个叫 BLOG_TOKEN 的密钥
+        API_TOKEN_GITHUB: ${{ secrets.BLOG_TOKEN }}
+      with:
+        source-directory: '.' # 要同步的源目录（整个内容仓库）
+        destination-github-username: 'ZhX589' # 你的 GitHub 用户名
+        destination-repository-name: 'ZhX589-blog' # 目标博客仓库名
+        user-email: 'your-email@example.com' # 你的邮箱
+        target-branch: 'main' # 博客仓库的分支
+        target-directory: 'src/content' # 核心修改点：指定同步到博客仓库的这个子目录下
