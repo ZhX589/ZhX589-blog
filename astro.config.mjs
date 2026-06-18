@@ -57,6 +57,7 @@ export default defineConfig({
 		}),
 		expressiveCode({
 			themes: [expressiveCodeConfig.theme, expressiveCodeConfig.theme],
+			langs: ['python', 'javascript', 'typescript', 'html', 'css', 'scss', 'bash', 'shell', 'json', 'yaml', 'markdown', 'sql', 'xml', 'tsx', 'jsx'],
 			plugins: [
 				pluginCollapsibleSections(),
 				pluginLineNumbers(),
@@ -114,7 +115,12 @@ export default defineConfig({
 			parseDirectiveNode,
 		],
 		rehypePlugins: [
-			rehypeKatex,
+			[
+				rehypeKatex,
+				{
+					strict: false,
+				}
+			],
 			rehypeSlug,
 			[
 				rehypeComponents,

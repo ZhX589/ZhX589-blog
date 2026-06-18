@@ -1,0 +1,233 @@
+{
+  "main": {
+    "id": "bf2bb46cb70acef1",
+    "type": "split",
+    "children": [
+      {
+        "id": "8a56853f9ce7cebf",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f352d6904453603e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/2025-08-15-Luogu__P1217_回文质数.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2025-08-15-Luogu__P1217_回文质数"
+            }
+          },
+          {
+            "id": "5179a8e0c7a420df",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/2025-08-15-Luogu__P1217_回文质数.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "2025-08-15-Luogu__P1217_回文质数"
+            }
+          },
+          {
+            "id": "fb54a4be9068dc0a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/Test.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Test"
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f480794f3e134880",
+    "type": "split",
+    "children": [
+      {
+        "id": "5be913c72b3f75ba",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f81fb5fe92085e2e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "9eab8e3cbbe4de06",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "5098ceb82d1e4fa6",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "b09964f34b29ab79",
+    "type": "split",
+    "children": [
+      {
+        "id": "1ab86d9623ce88e4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ac83be17b16fcf66",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "反向链接"
+            }
+          },
+          {
+            "id": "c930caa86655d16b",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "出链"
+            }
+          },
+          {
+            "id": "1a6ffea5d560d5aa",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "b4c3416fa2ae5766",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "3d2c07404bdf92d6",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false
+    }
+  },
+  "active": "fb54a4be9068dc0a",
+  "lastOpenFiles": [
+    "posts/网站更新啦.md",
+    "posts/2025-12-08-Linux_基础_&amp;_Python_控制流.md",
+    "posts/2025-11-16-Python入门-2:变量、数据类型、基本运算.md",
+    "posts/2025-10-23- P6824 🉑乐题解.md",
+    "posts/Test.md",
+    "posts/2025-08-15-Luogu__P1217_回文质数.md",
+    "posts/2025-08-25-Linux入门：安装系统.md",
+    "posts/2025-09-25-树链剖分.md",
+    "posts/2025-08-17-你们玩过“开源游戏”吗？开源即时策略游戏——战地2100游玩体验.md",
+    "posts/2025-10-20-Open Source-Hackers Utopia.md",
+    "Blog-Template/Blog-Template.md",
+    "2026-06-18.md",
+    "001.md",
+    "Blog-Template",
+    "未命名.base",
+    "未命名.canvas",
+    "posts/2025-08-24-入门：C++的位运算.md",
+    "posts/2025-10-04-Linux终端使用帮助.md"
+  ]
+}
