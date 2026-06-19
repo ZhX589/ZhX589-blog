@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/Test.md",
+                "file": "posts/2025-08-15-Luogu__P1217_回文质数.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Test"
+              "title": "2025-08-15-Luogu__P1217_回文质数"
             }
           }
         ],
@@ -82,7 +82,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "题目",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -103,7 +103,8 @@
               "title": "书签"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -183,12 +184,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "posts/2025-08-15-Luogu__P1217_回文质数.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "大纲"
+              "title": "2025-08-15-Luogu__P1217_回文质数 的大纲"
             }
           },
           {
@@ -220,25 +222,31 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "fb54a4be9068dc0a",
+  "active": "8a29de4dea32170c",
   "lastOpenFiles": [
-    "posts/网站更新啦.md",
-    "posts/Test.md",
-    "posts/2025-12-08-Linux_基础_&amp;_Python_控制流.md",
-    "posts/2025-11-16-Python入门-2:变量、数据类型、基本运算.md",
-    "posts/2025-10-23- P6824 🉑乐题解.md",
-    "posts/2025-08-15-Luogu__P1217_回文质数.md",
-    "posts/2025-08-25-Linux入门：安装系统.md",
-    "posts/2025-09-25-树链剖分.md",
-    "posts/2025-08-17-你们玩过“开源游戏”吗？开源即时策略游戏——战地2100游玩体验.md",
+    "posts/2025-10-03-Luogu_P3218题解.md",
+    "posts/2025-10-04-Linux终端使用帮助.md",
     "posts/2025-10-20-Open Source-Hackers Utopia.md",
+    "posts/2025-10-23- P6824 🉑乐题解.md",
+    "posts/2025-11-03-Python入门.md",
+    "posts/2025-11-16-Python入门-2:变量、数据类型、基本运算.md",
+    "posts/2025-12-08-Linux_基础_&amp;_Python_控制流.md",
+    "posts/Test.md",
+    "posts/网站更新啦.md",
+    "posts/2025-09-25-树链剖分.md",
+    "posts/2025-08-25-Linux入门：安装系统.md",
+    "posts/2025-08-24-C++中二叉树的前序、中序、后序、层序遍历.md",
+    "posts/2025-08-24-入门：C++的位运算.md",
+    "posts/2025-08-24-入门：链表.md",
+    "posts/2025-08-24-入门：计算机的基本构成.md",
+    "posts/2025-08-17-你们玩过“开源游戏”吗？开源即时策略游戏——战地2100游玩体验.md",
+    "posts/2025-08-16-尝试解决Edge和Firefox滚动条样式不统一.md",
+    "posts/2025-08-15-Luogu__P1217_回文质数.md",
     "Blog-Template/Blog-Template.md",
     "2026-06-18.md",
     "001.md",
     "Blog-Template",
     "未命名.base",
-    "未命名.canvas",
-    "posts/2025-08-24-入门：C++的位运算.md",
-    "posts/2025-10-04-Linux终端使用帮助.md"
+    "未命名.canvas"
   ]
 }
