@@ -24,3 +24,4 @@ jobs:
         user-email: 'your-email@example.com' # 你的邮箱
         target-branch: 'main' # 博客仓库的分支
         target-directory: 'src/content' # 核心修改点：指定同步到博客仓库的这个子目录下
+        commit-message: "📝 更新文章: ${{ github.event.head_commit.message }} | From ${{ github.repository }}@${{ github.sha }}"
