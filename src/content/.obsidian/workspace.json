@@ -8,48 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "f352d6904453603e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/2025-08-15-Luogu__P1217_回文质数.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2025-08-15-Luogu__P1217_回文质数"
-            }
-          },
-          {
-            "id": "5179a8e0c7a420df",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/2025-08-15-Luogu__P1217_回文质数.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "2025-08-15-Luogu__P1217_回文质数"
-            }
-          },
-          {
-            "id": "fb54a4be9068dc0a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/2025-08-15-Luogu__P1217_回文质数.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2025-08-15-Luogu__P1217_回文质数"
-            }
-          },
-          {
             "id": "53ca1ed6e848199b",
             "type": "leaf",
             "state": {
@@ -63,8 +21,7 @@
               "title": "盼雨"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -229,7 +186,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -247,12 +204,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f81fb5fe92085e2e",
+  "active": "53ca1ed6e848199b",
   "lastOpenFiles": [
-    "posts/2025-08-24-入门：计算机的基本构成.md",
     "Blog-Template/Blog-Template.md",
     "posts/2025-08-15-Luogu__P1217_回文质数.md",
     "posts/盼雨.md",
+    "posts/2025-08-24-入门：计算机的基本构成.md",
     "posts/2025-10-03-Luogu_P3218题解.md",
     "posts/2025-10-04-Linux终端使用帮助.md",
     "posts/2025-10-20-Open Source-Hackers Utopia.md",

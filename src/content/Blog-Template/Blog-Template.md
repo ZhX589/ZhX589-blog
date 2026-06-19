@@ -1,7 +1,7 @@
 ---
 title: {{title}}
-published: {{date}} {{time}}
-updated: {{date}} {{time}}
+published: {{date}} 
+updated: {{date}} 
 description: ""
 tags: []
 category: ""
