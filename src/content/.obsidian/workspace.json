@@ -55,7 +55,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "盼雨.md",
+                "file": "posts/盼雨.md",
                 "mode": "source",
                 "source": false
               },
@@ -222,7 +222,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "盼雨.md"
+                "file": "posts/盼雨.md"
               },
               "icon": "lucide-info",
               "title": "盼雨的笔记属性"
@@ -233,8 +233,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 291.5,
-    "collapsed": true
+    "width": 291.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -248,12 +247,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "53ca1ed6e848199b",
+  "active": "f81fb5fe92085e2e",
   "lastOpenFiles": [
     "posts/2025-08-24-入门：计算机的基本构成.md",
     "Blog-Template/Blog-Template.md",
     "posts/2025-08-15-Luogu__P1217_回文质数.md",
-    "盼雨.md",
+    "posts/盼雨.md",
     "posts/2025-10-03-Luogu_P3218题解.md",
     "posts/2025-10-04-Linux终端使用帮助.md",
     "posts/2025-10-20-Open Source-Hackers Utopia.md",
