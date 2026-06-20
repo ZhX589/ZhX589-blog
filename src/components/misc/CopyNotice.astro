@@ -1,0 +1,45 @@
+---
+import { Toaster } from 'svelte-sonner';
+import { licenseConfig, profileConfig } from "../../config";
+
+const profileConf = profileConfig;
+const licenseConf = licenseConfig;
+---
+
+<Toaster 
+  client:load 
+  position="bottom-right" 
+  duration={3000} 
+  closeButton={true} 
+/>
+
+<script>
+  import { toast } from 'svelte-sonner';
+  // @ts-ignore
+  window.customToast = toast;
+</script>
+
+<script define:vars={{ authorName: profileConf.name, licenseName: licenseConf.name }}>
+  document.addEventListener('copy', (e) => {
+    const selection = window.getSelection();
+    if (!selection || selection.toString().length < 10) return; 
+
+    const originText = selection.toString();
+    const currentUrl = decodeURIComponent(window.location.href);
+    const pageTitle = document.title;
+
+    const shareText = `${originText}\n\n-----------------------------------------\n作者: ${authorName}\n链接: ${currentUrl}\n来源: ${pageTitle}\n协议: ${licenseName}\n-----------------------------------------`;
+    
+    if (e.clipboardData) {
+      e.clipboardData.setData('text/plain', shareText);
+      e.preventDefault();
+    }
+
+    // 通过全局挂载的函数弹出提示，完美避开 import 报错
+    if (window.customToast) {
+      window.customToast.success('复制成功！', {
+        description: `本文采用 ${licenseName} 协议，严禁商用，转载、非商业用途请注明出处。`,
+      });
+    }
+  });
+</script>
