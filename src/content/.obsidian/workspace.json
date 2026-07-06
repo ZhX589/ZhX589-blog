@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "未命名.md",
+                "file": "学习NixOS预告.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "未命名"
+              "title": "学习NixOS预告"
             }
           }
         ],
@@ -222,7 +222,7 @@
   "active": "66c6993f76cf98ee",
   "lastOpenFiles": [
     "posts/Test.md",
-    "未命名.md",
+    "学习NixOS预告.md",
     "posts/网站更新啦.md",
     "posts/2025-08-17-你们玩过“开源游戏”吗？开源即时策略游戏——战地2100游玩体验.md",
     "posts/2025-08-16-尝试解决Edge和Firefox滚动条样式不统一.md",
