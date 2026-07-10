@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/Arch NTQQ Fcitx5.md",
+                "file": "spec/links.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Arch NTQQ Fcitx5"
+              "title": "links"
             }
           }
         ],
@@ -235,12 +235,13 @@
   },
   "active": "10f54ffea8194b3e",
   "lastOpenFiles": [
+    "spec/cover.png",
+    "学习NixOS预告.md",
+    "posts/Arch NTQQ Fcitx5.md",
     "posts/网站更新啦.md",
     "posts/盼雨.md",
-    "posts/Arch NTQQ Fcitx5.md",
     "posts/Test.md",
     "posts/2025-08-24-入门：链表.md",
-    "学习NixOS预告.md",
     "posts/2025-08-17-你们玩过“开源游戏”吗？开源即时策略游戏——战地2100游玩体验.md",
     "posts/2025-08-16-尝试解决Edge和Firefox滚动条样式不统一.md",
     "posts/2025-08-15-Luogu__P1217_回文质数.md",
