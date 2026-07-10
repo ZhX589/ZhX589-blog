@@ -1,7 +1,7 @@
 ---
 title: Arch NTQQ Fcitx5
 published: 2026-07-10 11:14:28
-updated: 2026-07-10 11:29:07
+updated: 2026-07-10 11:33:03
 description: Arch Linux 上 NTQQ 在 Wayland 下使用 Fcitx5 输入法的一些建议
 tags:
   - QQ
@@ -10,6 +10,8 @@ tags:
 category: 笔记
 draft: false
 ---
+# Arch Linux: 如何在 wayland 上优雅地让 NTQQ 的 Fcitx5 输入法正常使用
+
 一开始在和一些大佬讨论了环境变量方案，发现环境变量可能会导致很多其他问题，因而转向 Wiki 上推荐的参数方案。腾讯QQ 是 Electron 程序，因而可以是用
 ```bash 
 --enable-features=UseOzonePlatform --ozone-platform=wayland --enable-wayland-ime

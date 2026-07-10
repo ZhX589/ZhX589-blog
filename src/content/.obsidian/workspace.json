@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "spec/links.md",
+                "file": "posts/Arch NTQQ Fcitx5.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "links"
+              "title": "Arch NTQQ Fcitx5"
             }
           }
         ],
@@ -235,6 +235,7 @@
   },
   "active": "10f54ffea8194b3e",
   "lastOpenFiles": [
+    "spec/links.md",
     "spec/cover.png",
     "学习NixOS预告.md",
     "posts/Arch NTQQ Fcitx5.md",
