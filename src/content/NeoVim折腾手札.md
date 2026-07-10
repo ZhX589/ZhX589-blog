@@ -6,5 +6,5 @@ description: 我折腾nvim的那些大大小小的事情
 tags:
   - neovim
 category: ""
-draft: false
+draft: true
 ---
