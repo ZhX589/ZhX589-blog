@@ -48,9 +48,23 @@
               "icon": "lucide-file",
               "title": "Arch NTQQ Fcitx5"
             }
+          },
+          {
+            "id": "d2d31dec47a9c033",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "NeoVim折腾手札.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "NeoVim折腾手札"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -233,12 +247,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "10f54ffea8194b3e",
+  "active": "d2d31dec47a9c033",
   "lastOpenFiles": [
+    "posts/Arch NTQQ Fcitx5.md",
+    "NeoVim折腾手札.md",
+    "学习NixOS预告.md",
     "spec/links.md",
     "spec/cover.png",
-    "学习NixOS预告.md",
-    "posts/Arch NTQQ Fcitx5.md",
     "posts/网站更新啦.md",
     "posts/盼雨.md",
     "posts/Test.md",
