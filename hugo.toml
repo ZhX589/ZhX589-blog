@@ -50,7 +50,7 @@ hasCJKLanguage = true
 
   [params.assets]
     favicon = "/ZhX589_256x256.ico"
-    favicon16x16 = "/ZhX589_256x16.ico"
+    favicon16x16 = "/ZhX589_16x16.ico"
     favicon32x32 = "/ZhX589_32x32.ico"
     apple_touch_icon = "/ZhX589_256x256.ico"
     safari_pinned_tab = "/ZhX589_256x256.ico"
