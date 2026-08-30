@@ -1,4 +1,4 @@
-baseURL = 'https://zhx589.top/'
+baseURL = 'https://blog.zhx589.top/'
 locale = 'zh-cn'
 title = "ZhX589's Blog"
 paginate= 5
