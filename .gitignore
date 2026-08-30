@@ -1,0 +1,14 @@
+# Hugo 生成的静态文件
+public/
+resources/
+
+# 依赖和缓存
+node_modules/
+.hugo_build.lock
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 环境变量
+.env

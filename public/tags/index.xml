@@ -4,8 +4,259 @@
     <title>Tags on ZhX589&#39;s Blog</title>
     <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on ZhX589&#39;s Blog</description>
+    <image>
+      <title>ZhX589&#39;s Blog</title>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
     <generator>Hugo</generator>
     <language>zh-cn</language>
+    <lastBuildDate>Sat, 20 Jun 2026 01:23:18 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>习作</title>
+      <link>http://localhost:1313/tags/%E4%B9%A0%E4%BD%9C/</link>
+      <pubDate>Fri, 19 Jun 2026 22:56:40 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E4%B9%A0%E4%BD%9C/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>网站</title>
+      <link>http://localhost:1313/tags/%E7%BD%91%E7%AB%99/</link>
+      <pubDate>Thu, 18 Jun 2026 21:07:33 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E7%BD%91%E7%AB%99/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AIGC辅助</title>
+      <link>http://localhost:1313/tags/aigc%E8%BE%85%E5%8A%A9/</link>
+      <pubDate>Mon, 08 Dec 2025 11:24:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/aigc%E8%BE%85%E5%8A%A9/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux</title>
+      <link>http://localhost:1313/tags/linux/</link>
+      <pubDate>Mon, 08 Dec 2025 11:24:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>技术</title>
+      <link>http://localhost:1313/tags/%E6%8A%80%E6%9C%AF/</link>
+      <pubDate>Mon, 08 Dec 2025 11:24:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E6%8A%80%E6%9C%AF/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>教程</title>
+      <link>http://localhost:1313/tags/%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Mon, 08 Dec 2025 11:24:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E6%95%99%E7%A8%8B/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>http://localhost:1313/tags/python/</link>
+      <pubDate>Mon, 17 Nov 2025 11:20:41 +0800</pubDate>
+      <guid>http://localhost:1313/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>入门</title>
+      <link>http://localhost:1313/tags/%E5%85%A5%E9%97%A8/</link>
+      <pubDate>Mon, 17 Nov 2025 11:20:41 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E5%85%A5%E9%97%A8/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>C&#43;&#43;</title>
+      <link>http://localhost:1313/tags/c&#43;&#43;/</link>
+      <pubDate>Thu, 23 Oct 2025 18:49:57 +0800</pubDate>
+      <guid>http://localhost:1313/tags/c&#43;&#43;/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Luogu</title>
+      <link>http://localhost:1313/tags/luogu/</link>
+      <pubDate>Thu, 23 Oct 2025 18:49:57 +0800</pubDate>
+      <guid>http://localhost:1313/tags/luogu/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>XOR</title>
+      <link>http://localhost:1313/tags/xor/</link>
+      <pubDate>Thu, 23 Oct 2025 18:49:57 +0800</pubDate>
+      <guid>http://localhost:1313/tags/xor/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>算法</title>
+      <link>http://localhost:1313/tags/%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Thu, 23 Oct 2025 18:49:57 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E7%AE%97%E6%B3%95/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>English</title>
+      <link>http://localhost:1313/tags/english/</link>
+      <pubDate>Mon, 20 Oct 2025 10:42:03 +0800</pubDate>
+      <guid>http://localhost:1313/tags/english/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Open Source</title>
+      <link>http://localhost:1313/tags/open-source/</link>
+      <pubDate>Mon, 20 Oct 2025 10:42:03 +0800</pubDate>
+      <guid>http://localhost:1313/tags/open-source/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>开源</title>
+      <link>http://localhost:1313/tags/%E5%BC%80%E6%BA%90/</link>
+      <pubDate>Mon, 20 Oct 2025 10:42:03 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E5%BC%80%E6%BA%90/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>数据结构</title>
+      <link>http://localhost:1313/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
+      <pubDate>Thu, 25 Sep 2025 18:54:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>树</title>
+      <link>http://localhost:1313/tags/%E6%A0%91/</link>
+      <pubDate>Thu, 25 Sep 2025 18:54:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E6%A0%91/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>语法</title>
+      <link>http://localhost:1313/tags/%E8%AF%AD%E6%B3%95/</link>
+      <pubDate>Mon, 25 Aug 2025 15:03:09 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E8%AF%AD%E6%B3%95/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>数据结构，链表</title>
+      <link>http://localhost:1313/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%93%BE%E8%A1%A8/</link>
+      <pubDate>Mon, 25 Aug 2025 15:00:34 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%93%BE%E8%A1%A8/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>二叉树</title>
+      <link>http://localhost:1313/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/</link>
+      <pubDate>Sun, 24 Aug 2025 19:36:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>树的遍历</title>
+      <link>http://localhost:1313/tags/%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86/</link>
+      <pubDate>Sun, 24 Aug 2025 19:36:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CSP</title>
+      <link>http://localhost:1313/tags/csp/</link>
+      <pubDate>Sun, 24 Aug 2025 16:37:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/csp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>计算机理论</title>
+      <link>http://localhost:1313/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/</link>
+      <pubDate>Sun, 24 Aug 2025 16:37:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Warzone2100</title>
+      <link>http://localhost:1313/tags/warzone2100/</link>
+      <pubDate>Sun, 17 Aug 2025 15:28:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/warzone2100/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>介绍档</title>
+      <link>http://localhost:1313/tags/%E4%BB%8B%E7%BB%8D%E6%A1%A3/</link>
+      <pubDate>Sun, 17 Aug 2025 15:28:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E4%BB%8B%E7%BB%8D%E6%A1%A3/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>日常</title>
+      <link>http://localhost:1313/tags/%E6%97%A5%E5%B8%B8/</link>
+      <pubDate>Sun, 17 Aug 2025 15:28:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E6%97%A5%E5%B8%B8/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>游戏</title>
+      <link>http://localhost:1313/tags/%E6%B8%B8%E6%88%8F/</link>
+      <pubDate>Sun, 17 Aug 2025 15:28:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E6%B8%B8%E6%88%8F/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CSS</title>
+      <link>http://localhost:1313/tags/css/</link>
+      <pubDate>Sat, 16 Aug 2025 14:46:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/css/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>HTML</title>
+      <link>http://localhost:1313/tags/html/</link>
+      <pubDate>Sat, 16 Aug 2025 14:46:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/html/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>网页</title>
+      <link>http://localhost:1313/tags/%E7%BD%91%E9%A1%B5/</link>
+      <pubDate>Sat, 16 Aug 2025 14:46:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E7%BD%91%E9%A1%B5/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>回文数</title>
+      <link>http://localhost:1313/tags/%E5%9B%9E%E6%96%87%E6%95%B0/</link>
+      <pubDate>Fri, 15 Aug 2025 21:09:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E5%9B%9E%E6%96%87%E6%95%B0/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>质数筛</title>
+      <link>http://localhost:1313/tags/%E8%B4%A8%E6%95%B0%E7%AD%9B/</link>
+      <pubDate>Fri, 15 Aug 2025 21:09:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E8%B4%A8%E6%95%B0%E7%AD%9B/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Arch</title>
+      <link>http://localhost:1313/tags/arch/</link>
+      <pubDate>Thu, 10 Jul 2025 11:14:28 +0800</pubDate>
+      <guid>http://localhost:1313/tags/arch/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>QQ</title>
+      <link>http://localhost:1313/tags/qq/</link>
+      <pubDate>Thu, 10 Jul 2025 11:14:28 +0800</pubDate>
+      <guid>http://localhost:1313/tags/qq/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>图论</title>
+      <link>http://localhost:1313/tags/%E5%9B%BE%E8%AE%BA/</link>
+      <pubDate>Sat, 09 Sep 2023 00:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/tags/%E5%9B%BE%E8%AE%BA/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

@@ -3,11 +3,15 @@ locale = 'zh-cn'
 title = "ZhX589's Blog"
 paginate= 5
 theme = "PaperMod"
+timeZone = "Asia/Shanghai"
 
 enableRobotsTXT = true
 buildDrafts = false
 buildFuture = false
 buildExpired = false
+
+metaDataFormat = "yaml"
+hasCJKLanguage = true
 
 [minify]
   disableXML = true
@@ -15,12 +19,12 @@ buildExpired = false
 
 [params]
   env = "production"
-  title = "ExampleSite"
-  description = "ExampleSite description"
-  keywords = ["Blog", "Portfolio", "PaperMod"]
-  author = "Me"
+  title = "ZhX589 笔记"
+  description = "ZhX589 的个人笔记，主要和计算机相关。"
+  keywords = ["Blog", "计算机", "笔记"]
+  author = "ZhX589"
   images = ["<link or path of image for opengraph, twitter-cards>"]
-  DateFormat = "2006年01月02日"
+  DateFormat = "2006年01月02日 15:04"
   defaultTheme = "auto"
   disableThemeToggle = false
 
@@ -37,53 +41,57 @@ buildExpired = false
   comments = false
   hidemeta = false
   hideSummary = false
-  showtoc = false
+  showtoc = true
   tocopen = false
 
   [params.assets]
-    favicon = "<link / abs url>"
-    favicon16x16 = "<link / abs url>"
-    favicon32x32 = "<link / abs url>"
-    apple_touch_icon = "<link / abs url>"
-    safari_pinned_tab = "<link / abs url>"
+    favicon = "/ZhX589_256x256.ico"
+    favicon16x16 = "/ZhX589_256x16.ico"
+    favicon32x32 = "/ZhX589_32x32.ico"
+    apple_touch_icon = "/ZhX589_256x256.ico"
+    safari_pinned_tab = "/ZhX589_256x256.ico"
 
   [params.label]
     text = "Home"
-    icon = "/apple-touch-icon.png"
+    icon = "/ZhX589_256x256.ico"
     iconHeight = 35
 
   [params.profileMode]
-    enabled = false
-    title = "ExampleSite"
-    subtitle = "This is subtitle"
-    imageUrl = "<img location>"
+    enabled = true
+    title = "ZhX589"
+    subtitle = "Segui il tuo corso, e lascia dir le genti. "
+    imageUrl = "https://q1.qlogo.cn/g?b=qq&nk=2029837068&s=640"
     imageWidth = 120
     imageHeight = 120
     imageTitle = "my image"
 
     [[params.profileMode.buttons]]
-      name = "Posts"
+      name = "文章"
       url = "posts"
 
     [[params.profileMode.buttons]]
-      name = "Tags"
+      name = "标签"
       url = "tags"
+
+    [[params.profileMode.buttons]]
+      name = "关于"
+      url = "about"
 
   [params.homeInfoParams]
     Title = "Hi there 👋"
-    Content = "Welcome to my blog"
+    Content = "Enjoy your reading!"
 
   [[params.socialIcons]]
     name = "x"
-    url = "https://x.com/"
-
-  [[params.socialIcons]]
-    name = "stackoverflow"
-    url = "https://stackoverflow.com"
+    url = "https://x.com/Xiaohei_ZhX589"
 
   [[params.socialIcons]]
     name = "github"
-    url = "https://github.com/"
+    url = "https://github.com/ZhX589"
+
+  [[params.socialIcons]]
+    name = "bilibili"
+    url = "https://space.bilibili.com/3493262669122054"
 
   [params.analytics]
     [params.analytics.google]
@@ -114,22 +122,28 @@ buildExpired = false
     keys = ["title", "permalink", "summary", "content"]
 
 [[menu.main]]
-  identifier = "categories"
-  name = "categories"
-  url = "/categories/"
+  identifier = "about"
+  name = "关于"
+  url = "/about/"
   weight = 10
 
 [[menu.main]]
-  identifier = "tags"
-  name = "tags"
-  url = "/tags/"
+  identifier = "categories"
+  name = "分类"
+  url = "/categories/"
   weight = 20
 
 [[menu.main]]
-  identifier = "example"
-  name = "example.org"
-  url = "https://example.org"
+  identifier = "tags"
+  name = "标签"
+  url = "/tags/"
   weight = 30
+
+[[menu.main]]
+  identifier = "travellings"
+  name = "开往"
+  url = "https://www.travellings.cn/go.html"
+  weight = 40
 
 pygmentsUseClasses = true
 
