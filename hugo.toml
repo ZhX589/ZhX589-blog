@@ -17,6 +17,10 @@ hasCJKLanguage = true
   disableXML = true
   minifyOutput = true
 
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
 [params]
   env = "production"
   title = "ZhX589 笔记"
