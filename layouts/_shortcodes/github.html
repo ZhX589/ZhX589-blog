@@ -1,0 +1,21 @@
+{{- $repo := .Get "repo" | default (.Get 0) | default "" -}}
+{{- if ne (len (findRE `^[A-Za-z0-9][A-Za-z0-9-]*/[A-Za-z0-9_.-]+$` $repo)) 1 -}}
+  {{- errorf "github shortcode requires repo=\"owner/repository\": %s" .Position -}}
+{{- else -}}
+{{- $parts := split $repo "/" -}}
+{{- $description := .Get "description" | default "访问 GitHub 查看仓库详情。" -}}
+<a class="github-card" href="https://github.com/{{ $repo }}" target="_blank" rel="noopener noreferrer" data-github-repo="{{ $repo }}" aria-label="GitHub 仓库 {{ $repo }}">
+  <div class="github-card-heading">
+    <img class="github-card-avatar" src="https://github.com/{{ index $parts 0 }}.png?size=80" alt="" width="32" height="32" loading="lazy" referrerpolicy="no-referrer">
+    <span class="github-card-name"><span>{{ index $parts 0 }}</span><span class="github-card-slash"> / </span><strong>{{ index $parts 1 }}</strong></span>
+    {{ partial "components/icon.html" "github" }}
+  </div>
+  <p class="github-card-description" data-repo-description>{{ $description }}</p>
+  <div class="github-card-stats">
+    <span aria-label="Star 数">{{ partial "components/icon.html" "star" }}<span data-repo-stars>—</span></span>
+    <span aria-label="Fork 数">{{ partial "components/icon.html" "fork" }}<span data-repo-forks>—</span></span>
+    <span aria-label="许可证">{{ partial "components/icon.html" "license" }}<span data-repo-license>—</span></span>
+    <span class="github-card-status" data-repo-status aria-live="polite">GitHub</span>
+  </div>
+</a>
+{{- end -}}

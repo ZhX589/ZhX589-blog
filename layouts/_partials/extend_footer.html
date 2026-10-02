@@ -1,0 +1,6 @@
+{{/* The footer partial is cached across pages, so these enhancers are loaded
+     globally rather than conditioned on whichever page populated the cache. */}}
+{{- range $path := slice "js/page-transition.js" "js/github-cards.js" -}}
+  {{- $script := resources.Get $path | resources.Minify | fingerprint -}}
+<script defer src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous"></script>
+{{- end -}}

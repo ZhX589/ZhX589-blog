@@ -1,0 +1,4 @@
+{{- $type := .Get "type" | default "note" -}}
+{{- $title := .Get "title" | default "" -}}
+{{- $content := .Page.RenderString (dict "display" "block") .Inner -}}
+{{- partial "components/alert.html" (dict "type" $type "title" $title "content" $content) -}}

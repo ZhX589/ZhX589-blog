@@ -1,0 +1,268 @@
+/* ==========================================================================
+   Fuwari-inspired motion layer
+   --------------------------------------------------------------------------
+   1. Entrance: fade + rise, staggered like Fuwari's .onload-animation.
+   2. Navigation: Swup-style fade-out before leaving the page.
+   3. Micro-interactions: nav underline, cards, buttons, back-to-top.
+   4. Motion is fully disabled under prefers-reduced-motion.
+
+   NOTE: keyframes animate the individual `translate` property, NOT `transform`.
+   A `forwards`/`both` animated `transform` would permanently outrank PaperMod's
+   `.post-entry:hover { transform: translateY(-2px) }` and kill the hover lift.
+   `translate` and `transform` compose, so both keep working.
+   ========================================================================== */
+
+:root {
+    --anim-duration: 320ms;
+    --anim-distance: 1.5rem;
+    --anim-ease: cubic-bezier(0.22, 1, 0.36, 1);
+    --anim-fast: 200ms;
+}
+
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        translate: 0 var(--anim-distance);
+    }
+    to {
+        opacity: 1;
+        translate: 0 0;
+    }
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Keep the canvas painted in the theme colour so fading <body> out on
+   navigation cannot flash the default white background in dark mode. */
+html {
+    background: var(--theme);
+}
+
+/* ==========================================================================
+   1. Entrance animations
+   ========================================================================== */
+
+.header {
+    animation: fade-in var(--anim-fast) var(--anim-ease) both;
+}
+
+.main > .page-header {
+    animation: fade-in-up var(--anim-duration) var(--anim-ease) both;
+    animation-delay: 60ms;
+}
+
+.main > .profile {
+    animation: fade-in-up var(--anim-duration) var(--anim-ease) both;
+    animation-delay: 120ms;
+}
+
+/* List entries (home, sections, terms). `.post-single` is handled below so its
+   inner blocks can stagger individually. */
+.main > article:not(.post-single) {
+    animation: fade-in-up var(--anim-duration) var(--anim-ease) both;
+    animation-delay: 140ms;
+}
+
+.main > article:nth-of-type(2) { animation-delay: 190ms; }
+.main > article:nth-of-type(3) { animation-delay: 240ms; }
+.main > article:nth-of-type(4) { animation-delay: 290ms; }
+.main > article:nth-of-type(5) { animation-delay: 340ms; }
+.main > article:nth-of-type(n+6) { animation-delay: 390ms; }
+
+/* Single post: header, optional TOC, then the body staggered per block. */
+.post-single > .post-header {
+    animation: fade-in-up var(--anim-duration) var(--anim-ease) both;
+    animation-delay: 80ms;
+}
+
+.post-single > .toc {
+    animation: fade-in-up var(--anim-duration) var(--anim-ease) both;
+    animation-delay: 120ms;
+}
+
+.post-single .post-content > * {
+    animation: fade-in-up var(--anim-duration) var(--anim-ease) both;
+    animation-delay: 160ms;
+}
+
+.post-single .post-content > *:nth-child(2) { animation-delay: 210ms; }
+.post-single .post-content > *:nth-child(3) { animation-delay: 260ms; }
+.post-single .post-content > *:nth-child(4) { animation-delay: 310ms; }
+.post-single .post-content > *:nth-child(5) { animation-delay: 360ms; }
+.post-single .post-content > *:nth-child(n+6) { animation-delay: 410ms; }
+
+.post-single > .post-footer {
+    animation: fade-in-up var(--anim-duration) var(--anim-ease) both;
+    animation-delay: 280ms;
+}
+
+.footer {
+    animation: fade-in-up var(--anim-duration) var(--anim-ease) both;
+    animation-delay: 250ms;
+}
+
+/* ==========================================================================
+   2. Navigation transition (Swup-like leave animation)
+   ========================================================================== */
+
+html.is-leaving body {
+    opacity: 0;
+    transition: opacity 170ms cubic-bezier(0.4, 0, 1, 1);
+}
+
+/* ==========================================================================
+   3. Micro-interactions
+   ========================================================================== */
+
+/* Nav links: underline grows from the centre on hover. */
+.menu a > span {
+    position: relative;
+}
+
+.menu a > span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -0.35rem;
+    height: 2px;
+    border-radius: 2px;
+    background: currentColor;
+    scale: 0 1;
+    transition: scale var(--anim-fast) var(--anim-ease);
+}
+
+/* The active item keeps the bar permanently and we drop PaperMod's own
+   text-decoration, otherwise both underlines would render on top of each other. */
+.menu .active {
+    text-decoration: none;
+}
+
+.menu a:hover > span::after,
+.menu a:focus-visible > span::after,
+.menu a > span.active::after {
+    scale: 1 1;
+}
+
+/* Theme toggle: springy press feedback. */
+#theme-toggle {
+    transition: transform var(--anim-fast) var(--anim-ease), color var(--anim-fast) var(--anim-ease);
+}
+
+#theme-toggle svg {
+    transition: transform 320ms var(--anim-ease);
+}
+
+#theme-toggle:hover svg {
+    transform: rotate(25deg);
+}
+
+#theme-toggle:active {
+    transform: scale(0.88);
+}
+
+#theme-toggle:active svg {
+    transform: rotate(-25deg) scale(0.9);
+}
+
+/* Cards: PaperMod already lifts on hover; add depth and a softer easing. */
+.post-entry {
+    transition: transform 260ms var(--anim-ease), border-color 260ms var(--anim-ease),
+        box-shadow 260ms var(--anim-ease), background-color 260ms var(--anim-ease);
+}
+
+.post-entry:hover,
+.post-entry:focus-within {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+:root[data-theme="dark"] .post-entry:hover,
+:root[data-theme="dark"] .post-entry:focus-within {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+}
+
+/* Social icons and profile buttons. */
+.social-icons a,
+.profile .button {
+    transition: transform var(--anim-fast) var(--anim-ease), background-color var(--anim-fast) var(--anim-ease),
+        color var(--anim-fast) var(--anim-ease);
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+}
+
+.profile .button:hover {
+    transform: translateY(-2px);
+}
+
+.profile .button:active {
+    transform: scale(0.96);
+}
+
+/* Back to top: slide + scale in and out of view. */
+.top-link {
+    transition: visibility 300ms, opacity 300ms var(--anim-ease), transform 300ms var(--anim-ease),
+        color var(--anim-fast) var(--anim-ease);
+}
+
+.top-link.hidden {
+    transform: translateY(0.75rem) scale(0.9);
+}
+
+.top-link:hover {
+    transform: translateY(-3px);
+}
+
+/* Content links keep their underline but fade its colour on hover. */
+.md-content a:not(.anchor):not(.github-card) {
+    transition: text-decoration-color var(--anim-fast) var(--anim-ease), color var(--anim-fast) var(--anim-ease);
+}
+
+/* Smooth colour crossfade when switching light/dark. */
+body,
+.header,
+.footer,
+.post-single,
+.toc,
+.md-content blockquote,
+.md-content table th,
+.md-content table td,
+.callout,
+.md-content a.github-card {
+    transition: background-color var(--anim-fast) var(--anim-ease),
+        border-color var(--anim-fast) var(--anim-ease), color var(--anim-fast) var(--anim-ease);
+}
+
+/* ==========================================================================
+   4. Accessibility
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+        animation-duration: 0.001ms !important;
+        animation-delay: 0s !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        transition-delay: 0s !important;
+        scroll-behavior: auto !important;
+    }
+
+    .post-entry:hover,
+    .post-entry:focus-within,
+    .social-icons a:hover,
+    .profile .button:hover,
+    .profile .button:active,
+    .top-link.hidden,
+    .top-link:hover,
+    #theme-toggle:active,
+    #theme-toggle:hover svg,
+    #theme-toggle:active svg {
+        transform: none;
+    }
+}

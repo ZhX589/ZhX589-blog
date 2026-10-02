@@ -1,0 +1,155 @@
+/* Shared icons and Fuwari-inspired Markdown components. */
+.component-icon {
+    width: 1.2em;
+    height: 1.2em;
+    flex-shrink: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.callout {
+    --callout-color: #287ac0;
+    position: relative;
+    margin: 24px 0;
+    padding: 8px 0 8px 20px;
+    color: var(--content);
+    overflow-wrap: anywhere;
+}
+
+.callout::before {
+    content: "";
+    position: absolute;
+    inset-inline-start: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    border-radius: 4px;
+    background: var(--callout-color);
+}
+
+.callout-tip { --callout-color: #009c88; }
+.callout-important { --callout-color: #9561c8; }
+.callout-warning { --callout-color: #c77516; }
+.callout-caution { --callout-color: #d64045; }
+
+:root[data-theme="dark"] .callout-note { --callout-color: #63b3ff; }
+:root[data-theme="dark"] .callout-tip { --callout-color: #00c9ae; }
+:root[data-theme="dark"] .callout-important { --callout-color: #c792ea; }
+:root[data-theme="dark"] .callout-warning { --callout-color: #f5a04c; }
+:root[data-theme="dark"] .callout-caution { --callout-color: #ff555d; }
+
+.callout-title {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 10px;
+    color: var(--callout-color);
+    font-weight: 700;
+}
+
+.callout-title .component-icon {
+    align-self: center;
+}
+
+.callout-content > :last-child,
+.md-content .callout-content > :last-child {
+    margin-bottom: 0;
+}
+
+.callout-content > :first-child {
+    margin-top: 0;
+}
+
+.md-content a.github-card,
+a.github-card {
+    display: block;
+    margin: 24px 0;
+    padding: 24px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: var(--code-bg);
+    color: var(--content);
+    text-decoration: none;
+    box-shadow: none;
+    overflow-wrap: anywhere;
+    transition: border-color 160ms ease, background-color 160ms ease;
+}
+
+:root[data-theme="dark"] a.github-card {
+    background: #16171a;
+}
+
+.md-content a.github-card:hover,
+a.github-card:focus-visible {
+    border-color: #63b3ff;
+}
+
+a.github-card:focus-visible {
+    outline: 2px solid #63b3ff;
+    outline-offset: 4px;
+}
+
+.github-card-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--primary);
+    font-size: 1.15em;
+}
+
+.github-card-avatar {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.github-card-name {
+    flex: 1;
+    min-width: 0;
+}
+
+.github-card-slash {
+    color: var(--secondary);
+}
+
+.github-card-heading > .component-icon {
+    width: 28px;
+    height: 28px;
+}
+
+.github-card .github-card-description {
+    margin: 14px 0 16px;
+    font-size: 0.95em;
+    line-height: 1.65;
+}
+
+.github-card-stats,
+.github-card-stats > span {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.github-card-stats {
+    flex-wrap: wrap;
+    gap: 12px 24px;
+    color: var(--secondary);
+    font-size: 0.85em;
+}
+
+.github-card-status {
+    margin-inline-start: auto;
+    font-size: 0.9em;
+}
+
+@media (max-width: 480px) {
+    .md-content a.github-card { padding: 18px; }
+    .github-card-heading { gap: 8px; font-size: 1em; }
+    .github-card-stats { column-gap: 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    a.github-card { transition: none; }
+}
