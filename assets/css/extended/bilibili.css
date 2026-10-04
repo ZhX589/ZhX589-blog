@@ -1,0 +1,103 @@
+/* Video cards use the same theme variables as the existing components. */
+.md-content a.bilibili-card {
+    display: flex;
+    align-items: stretch;
+    margin: 24px 0;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    background: var(--code-bg);
+    color: var(--content);
+    text-decoration: none;
+    box-shadow: none;
+    transition: border-color 200ms ease, box-shadow 200ms ease;
+}
+
+:root[data-theme="dark"] .md-content a.bilibili-card { background: #16171a; }
+
+.md-content a.bilibili-card:hover,
+.md-content a.bilibili-card:focus-visible {
+    border-color: #fb7299;
+    box-shadow: 0 6px 22px rgba(251, 114, 153, 0.12);
+}
+
+.md-content a.bilibili-card:focus-visible {
+    outline: 2px solid #fb7299;
+    outline-offset: 4px;
+}
+
+.bilibili-card-cover {
+    position: relative;
+    flex: 0 0 42%;
+    min-height: 150px;
+    overflow: hidden;
+    background: var(--tertiary);
+}
+
+.md-content .bilibili-card-cover img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-radius: 0;
+    object-fit: cover;
+    transition: transform 300ms ease;
+}
+
+.bilibili-card:hover .bilibili-card-cover img { transform: scale(1.04); }
+
+.bilibili-card-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.45);
+    color: white;
+}
+
+.bilibili-card-play svg { width: 24px; height: 24px; }
+
+.bilibili-card-duration {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    padding: 1px 6px;
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.65);
+    color: white;
+    font-size: 12px;
+    font-variant-numeric: tabular-nums;
+}
+
+.bilibili-card-body {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+.bilibili-card-label { color: #fb7299; font-weight: 700; font-size: 0.85em; }
+.bilibili-card-title { color: var(--primary); line-height: 1.5; overflow-wrap: anywhere; }
+.bilibili-card-author,
+.bilibili-card-stats { color: var(--secondary); font-size: 0.8em; }
+.bilibili-card-stats { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-top: auto; }
+
+@media (max-width: 520px) {
+    .md-content a.bilibili-card { flex-direction: column; }
+    .bilibili-card-cover { flex-basis: auto; aspect-ratio: 16 / 9; }
+    .bilibili-card-body { padding: 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .md-content a.bilibili-card,
+    .md-content .bilibili-card-cover img { transition: none; }
+    .bilibili-card:hover .bilibili-card-cover img { transform: none; }
+}

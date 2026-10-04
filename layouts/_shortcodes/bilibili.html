@@ -1,0 +1,56 @@
+{{- $bvid := .Get "bvid" | default "" -}}
+{{- $aid := .Get "aid" | default "" -}}
+{{- $valid := true -}}
+{{- if or (and $bvid $aid) (not (or $bvid $aid)) -}}
+  {{- errorf "bilibili shortcode requires exactly one of bvid or aid: %s" .Position -}}
+  {{- $valid = false -}}
+{{- else if and $bvid (ne (len (findRE `^BV[0-9A-Za-z]{10}$` $bvid)) 1) -}}
+  {{- errorf "Invalid Bilibili BV ID %q: %s" $bvid .Position -}}
+  {{- $valid = false -}}
+{{- else if and $aid (ne (len (findRE `^[1-9][0-9]*$` (printf "%v" $aid))) 1) -}}
+  {{- errorf "Invalid Bilibili AV ID %q (use digits only): %s" $aid .Position -}}
+  {{- $valid = false -}}
+{{- end -}}
+{{- if $valid -}}
+  {{- $kind := "bvid" -}}
+  {{- $id := $bvid -}}
+  {{- $video := $bvid -}}
+  {{- if $aid -}}
+    {{- $kind = "aid" -}}
+    {{- $id = printf "%v" $aid -}}
+    {{- $video = printf "av%s" $id -}}
+  {{- end -}}
+  {{- $date := now.Format "2006-01-02" -}}
+  {{- $data := dict -}}
+  {{- if ne (.Get "fetch") "false" -}}
+    {{- $data = partialCached "components/bilibili-data.html" (dict "kind" $kind "id" $id "date" $date) $kind $id $date -}}
+  {{- end -}}
+  {{- $owner := index $data "owner" | default dict -}}
+  {{- $stats := index $data "stat" | default dict -}}
+  {{- $title := .Get "title" | default (index $data "title") | default (printf "Bilibili 视频 · %s" $video) -}}
+  {{- $cover := .Get "cover" | default (index $data "pic") | default "" -}}
+  {{- $author := .Get "author" | default (index $owner "name") | default "" -}}
+  {{- if strings.HasPrefix $cover "http://" -}}{{- $cover = replace $cover "http://" "https://" -}}{{- end -}}
+<a class="bilibili-card" href="https://www.bilibili.com/video/{{ $video }}/" target="_blank" rel="noopener noreferrer" aria-label="{{ $title }}（在 Bilibili 打开）">
+  <div class="bilibili-card-cover">
+    {{- with $cover }}
+    <img src="{{ . }}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="640" height="360">
+    {{- end }}
+    <span class="bilibili-card-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m9 5 11 7-11 7Z"/></svg></span>
+    {{- with index $data "duration" }}<span class="bilibili-card-duration">{{ div (int .) 60 }}:{{ printf "%02d" (mod (int .) 60) }}</span>{{ end }}
+  </div>
+  <div class="bilibili-card-body">
+    <span class="bilibili-card-label">bilibili</span>
+    <strong class="bilibili-card-title">{{ $title }}</strong>
+    {{- with $author }}<span class="bilibili-card-author">UP 主 · {{ . }}</span>{{ end }}
+    <div class="bilibili-card-stats">
+      {{- if $data }}
+      <span>播放 {{ lang.FormatNumber 0 (index $stats "view" | default 0) }}</span>
+      <span>点赞 {{ lang.FormatNumber 0 (index $stats "like" | default 0) }}</span>
+      {{- else }}
+      <span>{{ $video }} · 点击观看</span>
+      {{- end }}
+    </div>
+  </div>
+</a>
+{{- end -}}
