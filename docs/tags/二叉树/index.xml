@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>二叉树 on ZhX589&#39;s Blog</title>
+    <link>https://blog.zhx589.top/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/</link>
+    <description>Recent content in 二叉树 on ZhX589&#39;s Blog</description>
+    <image>
+      <title>ZhX589&#39;s Blog</title>
+      <url>https://blog.zhx589.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://blog.zhx589.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 24 Aug 2025 19:36:00 +0800</lastBuildDate>
+    <atom:link href="https://blog.zhx589.top/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C&#43;&#43;中二叉树的前序、中序、后序、层序遍历</title>
+      <link>https://blog.zhx589.top/posts/2025-08-24-c&#43;&#43;%E4%B8%AD%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%89%8D%E5%BA%8F%E4%B8%AD%E5%BA%8F%E5%90%8E%E5%BA%8F%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86/</link>
+      <pubDate>Sun, 24 Aug 2025 19:36:00 +0800</pubDate>
+      <guid>https://blog.zhx589.top/posts/2025-08-24-c&#43;&#43;%E4%B8%AD%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%89%8D%E5%BA%8F%E4%B8%AD%E5%BA%8F%E5%90%8E%E5%BA%8F%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86/</guid>
+      <description>&lt;h1 id=&#34;二叉树的遍历&#34;&gt;二叉树的遍历&lt;/h1&gt;
+&lt;blockquote&gt;&lt;p&gt;作者为蒟蒻高中牲，若有不妥之处请多多包含，并望于评论区指正，不胜感激！&lt;/p&gt;
+&lt;/blockquote&gt;&lt;h2 id=&#34;什么是二叉树&#34;&gt;什么是二叉树&lt;/h2&gt;
+&lt;p&gt;二叉树是一个&lt;strong&gt;为空&lt;/strong&gt;或者&lt;strong&gt;由不相交的左子树、右子树和根节点&lt;/strong&gt;组成的集合。其中左右子树也为二叉树。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

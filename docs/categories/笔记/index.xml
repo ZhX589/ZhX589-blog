@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>笔记 on ZhX589&#39;s Blog</title>
+    <link>https://blog.zhx589.top/categories/%E7%AC%94%E8%AE%B0/</link>
+    <description>Recent content in 笔记 on ZhX589&#39;s Blog</description>
+    <image>
+      <title>ZhX589&#39;s Blog</title>
+      <url>https://blog.zhx589.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://blog.zhx589.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 20 Oct 2025 10:42:03 +0800</lastBuildDate>
+    <atom:link href="https://blog.zhx589.top/categories/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Open Source: The Hacker&#39;s Utopia</title>
+      <link>https://blog.zhx589.top/posts/2025-10-20-open-source-hackers-utopia/</link>
+      <pubDate>Mon, 20 Oct 2025 10:42:03 +0800</pubDate>
+      <guid>https://blog.zhx589.top/posts/2025-10-20-open-source-hackers-utopia/</guid>
+      <description>这是一篇在英语课上分享开源软件的文章，使用AIGC工具辅助生成。</description>
+    </item>
+    <item>
+      <title>树链剖分</title>
+      <link>https://blog.zhx589.top/posts/2025-09-25-%E6%A0%91%E9%93%BE%E5%89%96%E5%88%86/</link>
+      <pubDate>Thu, 25 Sep 2025 18:54:00 +0800</pubDate>
+      <guid>https://blog.zhx589.top/posts/2025-09-25-%E6%A0%91%E9%93%BE%E5%89%96%E5%88%86/</guid>
+      <description>关于树链剖分的介绍</description>
+    </item>
+    <item>
+      <title>Linux入门：安装系统</title>
+      <link>https://blog.zhx589.top/posts/2025-08-25-linux%E5%85%A5%E9%97%A8%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F/</link>
+      <pubDate>Mon, 25 Aug 2025 17:21:31 +0800</pubDate>
+      <guid>https://blog.zhx589.top/posts/2025-08-25-linux%E5%85%A5%E9%97%A8%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F/</guid>
+      <description>&lt;h1 id=&#34;linux系统的安装&#34;&gt;Linux系统的安装&lt;/h1&gt;
+&lt;h2 id=&#34;1-系统的选择&#34;&gt;1. 系统的选择&lt;/h2&gt;
+&lt;p&gt;Linux发展了几十年，到今天已经诞生了上百种发行版
+&lt;img loading=&#34;lazy&#34; src=&#34;https://www.zhx-blog.top/usr/uploads/2025/08/2567349419.jpg&#34;&gt;
+我个人建议新手使用Ubnutu系的发行版（或debian系），软件源十分丰富，而且入手难度低；&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>入门：C&#43;&#43;的位运算</title>
+      <link>https://blog.zhx589.top/posts/2025-08-24-%E5%85%A5%E9%97%A8c&#43;&#43;%E7%9A%84%E4%BD%8D%E8%BF%90%E7%AE%97/</link>
+      <pubDate>Mon, 25 Aug 2025 15:03:09 +0800</pubDate>
+      <guid>https://blog.zhx589.top/posts/2025-08-24-%E5%85%A5%E9%97%A8c&#43;&#43;%E7%9A%84%E4%BD%8D%E8%BF%90%E7%AE%97/</guid>
+      <description>关于C&#43;&#43;程序设计语言的位运算内容的简要介绍</description>
+    </item>
+    <item>
+      <title>入门：链表</title>
+      <link>https://blog.zhx589.top/posts/2025-08-24-%E5%85%A5%E9%97%A8%E9%93%BE%E8%A1%A8/</link>
+      <pubDate>Mon, 25 Aug 2025 15:00:34 +0800</pubDate>
+      <guid>https://blog.zhx589.top/posts/2025-08-24-%E5%85%A5%E9%97%A8%E9%93%BE%E8%A1%A8/</guid>
+      <description>关于链表数据结构的介绍</description>
+    </item>
+    <item>
+      <title>C&#43;&#43;中二叉树的前序、中序、后序、层序遍历</title>
+      <link>https://blog.zhx589.top/posts/2025-08-24-c&#43;&#43;%E4%B8%AD%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%89%8D%E5%BA%8F%E4%B8%AD%E5%BA%8F%E5%90%8E%E5%BA%8F%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86/</link>
+      <pubDate>Sun, 24 Aug 2025 19:36:00 +0800</pubDate>
+      <guid>https://blog.zhx589.top/posts/2025-08-24-c&#43;&#43;%E4%B8%AD%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%89%8D%E5%BA%8F%E4%B8%AD%E5%BA%8F%E5%90%8E%E5%BA%8F%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86/</guid>
+      <description>&lt;h1 id=&#34;二叉树的遍历&#34;&gt;二叉树的遍历&lt;/h1&gt;
+&lt;blockquote&gt;&lt;p&gt;作者为蒟蒻高中牲，若有不妥之处请多多包含，并望于评论区指正，不胜感激！&lt;/p&gt;
+&lt;/blockquote&gt;&lt;h2 id=&#34;什么是二叉树&#34;&gt;什么是二叉树&lt;/h2&gt;
+&lt;p&gt;二叉树是一个&lt;strong&gt;为空&lt;/strong&gt;或者&lt;strong&gt;由不相交的左子树、右子树和根节点&lt;/strong&gt;组成的集合。其中左右子树也为二叉树。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>入门：计算机的基本构成</title>
+      <link>https://blog.zhx589.top/posts/2025-08-24-%E5%85%A5%E9%97%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%9E%84%E6%88%90/</link>
+      <pubDate>Sun, 24 Aug 2025 16:37:00 +0800</pubDate>
+      <guid>https://blog.zhx589.top/posts/2025-08-24-%E5%85%A5%E9%97%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%9E%84%E6%88%90/</guid>
+      <description>&lt;h1 id=&#34;计算机的构成&#34;&gt;计算机的构成&lt;/h1&gt;
+&lt;blockquote&gt;&lt;p&gt;作者为蒟蒻高中牲，若有不妥之处请多多包含，并望于评论区指正，不胜感激！&lt;/p&gt;
+&lt;/blockquote&gt;&lt;p&gt;计算机由&lt;strong&gt;软件&lt;/strong&gt;和&lt;strong&gt;硬件&lt;/strong&gt;构成。&lt;/p&gt;
+&lt;p&gt;-　硬件是指看得见摸得着的各种电子元器件。如主机、键盘、鼠标等。-　软件看不见摸不着，但在逻辑上，我们确实可以感知到它的存在，它由人们事先编制的具有某种功能的程序组成。比如操作系统、编程语言等。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>你们玩过“开源游戏”吗？开源即时策略游戏——战地2100游玩体验</title>
+      <link>https://blog.zhx589.top/posts/2025-08-17-%E4%BD%A0%E4%BB%AC%E7%8E%A9%E8%BF%87%E5%BC%80%E6%BA%90%E6%B8%B8%E6%88%8F%E5%90%97%E5%BC%80%E6%BA%90%E5%8D%B3%E6%97%B6%E7%AD%96%E7%95%A5%E6%B8%B8%E6%88%8F%E6%88%98%E5%9C%B02100%E6%B8%B8%E7%8E%A9%E4%BD%93%E9%AA%8C/</link>
+      <pubDate>Sun, 17 Aug 2025 15:28:00 +0800</pubDate>
+      <guid>https://blog.zhx589.top/posts/2025-08-17-%E4%BD%A0%E4%BB%AC%E7%8E%A9%E8%BF%87%E5%BC%80%E6%BA%90%E6%B8%B8%E6%88%8F%E5%90%97%E5%BC%80%E6%BA%90%E5%8D%B3%E6%97%B6%E7%AD%96%E7%95%A5%E6%B8%B8%E6%88%8F%E6%88%98%E5%9C%B02100%E6%B8%B8%E7%8E%A9%E4%BD%93%E9%AA%8C/</guid>
+      <description>简要地介绍了一下最近发现的开源RTS游戏Warzone 2100</description>
+    </item>
+    <item>
+      <title>Arch NTQQ Fcitx5</title>
+      <link>https://blog.zhx589.top/posts/arch-ntqq-fcitx5/</link>
+      <pubDate>Thu, 10 Jul 2025 11:14:28 +0800</pubDate>
+      <guid>https://blog.zhx589.top/posts/arch-ntqq-fcitx5/</guid>
+      <description>Arch Linux 上 NTQQ 在 Wayland 下使用 Fcitx5 输入法的一些建议</description>
+    </item>
+  </channel>
+</rss>

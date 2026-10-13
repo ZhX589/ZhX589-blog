@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>网站 on ZhX589&#39;s Blog</title>
+    <link>https://blog.zhx589.top/tags/%E7%BD%91%E7%AB%99/</link>
+    <description>Recent content in 网站 on ZhX589&#39;s Blog</description>
+    <image>
+      <title>ZhX589&#39;s Blog</title>
+      <url>https://blog.zhx589.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://blog.zhx589.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 18 Jun 2026 21:07:33 +0800</lastBuildDate>
+    <atom:link href="https://blog.zhx589.top/tags/%E7%BD%91%E7%AB%99/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>网站更新</title>
+      <link>https://blog.zhx589.top/posts/%E7%BD%91%E7%AB%99%E6%9B%B4%E6%96%B0%E5%95%A6/</link>
+      <pubDate>Thu, 18 Jun 2026 21:07:33 +0800</pubDate>
+      <guid>https://blog.zhx589.top/posts/%E7%BD%91%E7%AB%99%E6%9B%B4%E6%96%B0%E5%95%A6/</guid>
+      <description>关于网站更新的简要说明</description>
+    </item>
+  </channel>
+</rss>

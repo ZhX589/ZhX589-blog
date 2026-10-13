@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>日常 on ZhX589&#39;s Blog</title>
+    <link>https://blog.zhx589.top/tags/%E6%97%A5%E5%B8%B8/</link>
+    <description>Recent content in 日常 on ZhX589&#39;s Blog</description>
+    <image>
+      <title>ZhX589&#39;s Blog</title>
+      <url>https://blog.zhx589.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://blog.zhx589.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 17 Aug 2025 15:28:00 +0800</lastBuildDate>
+    <atom:link href="https://blog.zhx589.top/tags/%E6%97%A5%E5%B8%B8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>你们玩过“开源游戏”吗？开源即时策略游戏——战地2100游玩体验</title>
+      <link>https://blog.zhx589.top/posts/2025-08-17-%E4%BD%A0%E4%BB%AC%E7%8E%A9%E8%BF%87%E5%BC%80%E6%BA%90%E6%B8%B8%E6%88%8F%E5%90%97%E5%BC%80%E6%BA%90%E5%8D%B3%E6%97%B6%E7%AD%96%E7%95%A5%E6%B8%B8%E6%88%8F%E6%88%98%E5%9C%B02100%E6%B8%B8%E7%8E%A9%E4%BD%93%E9%AA%8C/</link>
+      <pubDate>Sun, 17 Aug 2025 15:28:00 +0800</pubDate>
+      <guid>https://blog.zhx589.top/posts/2025-08-17-%E4%BD%A0%E4%BB%AC%E7%8E%A9%E8%BF%87%E5%BC%80%E6%BA%90%E6%B8%B8%E6%88%8F%E5%90%97%E5%BC%80%E6%BA%90%E5%8D%B3%E6%97%B6%E7%AD%96%E7%95%A5%E6%B8%B8%E6%88%8F%E6%88%98%E5%9C%B02100%E6%B8%B8%E7%8E%A9%E4%BD%93%E9%AA%8C/</guid>
+      <description>简要地介绍了一下最近发现的开源RTS游戏Warzone 2100</description>
+    </item>
+  </channel>
+</rss>

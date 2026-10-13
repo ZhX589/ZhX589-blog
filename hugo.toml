@@ -4,6 +4,7 @@ title = "ZhX589's Blog"
 paginate= 5
 theme = "PaperMod"
 timeZone = "Asia/Shanghai"
+publishDir = "docs"
 
 enableRobotsTXT = true
 buildDrafts = false

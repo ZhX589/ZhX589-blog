@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>题解 on ZhX589&#39;s Blog</title>
+    <link>https://blog.zhx589.top/categories/%E9%A2%98%E8%A7%A3/</link>
+    <description>Recent content in 题解 on ZhX589&#39;s Blog</description>
+    <image>
+      <title>ZhX589&#39;s Blog</title>
+      <url>https://blog.zhx589.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://blog.zhx589.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 19 Jun 2026 22:55:58 +0800</lastBuildDate>
+    <atom:link href="https://blog.zhx589.top/categories/%E9%A2%98%E8%A7%A3/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title># P6824 🉑乐题解</title>
+      <link>https://blog.zhx589.top/posts/2025-10-23--p6824-%E4%B9%90%E9%A2%98%E8%A7%A3/</link>
+      <pubDate>Thu, 23 Oct 2025 18:49:57 +0800</pubDate>
+      <guid>https://blog.zhx589.top/posts/2025-10-23--p6824-%E4%B9%90%E9%A2%98%E8%A7%A3/</guid>
+      <description>洛谷P6824题解</description>
+    </item>
+    <item>
+      <title>Luogu__P1217_回文质数</title>
+      <link>https://blog.zhx589.top/posts/2025-08-15-luogu__p1217_%E5%9B%9E%E6%96%87%E8%B4%A8%E6%95%B0/</link>
+      <pubDate>Fri, 15 Aug 2025 21:09:00 +0800</pubDate>
+      <guid>https://blog.zhx589.top/posts/2025-08-15-luogu__p1217_%E5%9B%9E%E6%96%87%E8%B4%A8%E6%95%B0/</guid>
+      <description>洛谷 P1217 题解</description>
+    </item>
+    <item>
+      <title>Luogu P3218 题解</title>
+      <link>https://blog.zhx589.top/posts/2025-10-03-luogu_p3218%E9%A2%98%E8%A7%A3/</link>
+      <pubDate>Sat, 09 Sep 2023 00:00:00 +0800</pubDate>
+      <guid>https://blog.zhx589.top/posts/2025-10-03-luogu_p3218%E9%A2%98%E8%A7%A3/</guid>
+      <description>洛谷P3128 (求取被指定的多条路径覆盖的树中找出被覆盖次数最多的节点) 的题解</description>
+    </item>
+  </channel>
+</rss>

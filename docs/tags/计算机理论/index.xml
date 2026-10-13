@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>计算机理论 on ZhX589&#39;s Blog</title>
+    <link>https://blog.zhx589.top/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/</link>
+    <description>Recent content in 计算机理论 on ZhX589&#39;s Blog</description>
+    <image>
+      <title>ZhX589&#39;s Blog</title>
+      <url>https://blog.zhx589.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://blog.zhx589.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 24 Aug 2025 16:37:00 +0800</lastBuildDate>
+    <atom:link href="https://blog.zhx589.top/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>入门：计算机的基本构成</title>
+      <link>https://blog.zhx589.top/posts/2025-08-24-%E5%85%A5%E9%97%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%9E%84%E6%88%90/</link>
+      <pubDate>Sun, 24 Aug 2025 16:37:00 +0800</pubDate>
+      <guid>https://blog.zhx589.top/posts/2025-08-24-%E5%85%A5%E9%97%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%9E%84%E6%88%90/</guid>
+      <description>&lt;h1 id=&#34;计算机的构成&#34;&gt;计算机的构成&lt;/h1&gt;
+&lt;blockquote&gt;&lt;p&gt;作者为蒟蒻高中牲，若有不妥之处请多多包含，并望于评论区指正，不胜感激！&lt;/p&gt;
+&lt;/blockquote&gt;&lt;p&gt;计算机由&lt;strong&gt;软件&lt;/strong&gt;和&lt;strong&gt;硬件&lt;/strong&gt;构成。&lt;/p&gt;
+&lt;p&gt;-　硬件是指看得见摸得着的各种电子元器件。如主机、键盘、鼠标等。-　软件看不见摸不着，但在逻辑上，我们确实可以感知到它的存在，它由人们事先编制的具有某种功能的程序组成。比如操作系统、编程语言等。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

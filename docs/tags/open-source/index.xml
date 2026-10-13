@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Open Source on ZhX589&#39;s Blog</title>
+    <link>https://blog.zhx589.top/tags/open-source/</link>
+    <description>Recent content in Open Source on ZhX589&#39;s Blog</description>
+    <image>
+      <title>ZhX589&#39;s Blog</title>
+      <url>https://blog.zhx589.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://blog.zhx589.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 20 Oct 2025 10:42:03 +0800</lastBuildDate>
+    <atom:link href="https://blog.zhx589.top/tags/open-source/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Open Source: The Hacker&#39;s Utopia</title>
+      <link>https://blog.zhx589.top/posts/2025-10-20-open-source-hackers-utopia/</link>
+      <pubDate>Mon, 20 Oct 2025 10:42:03 +0800</pubDate>
+      <guid>https://blog.zhx589.top/posts/2025-10-20-open-source-hackers-utopia/</guid>
+      <description>这是一篇在英语课上分享开源软件的文章，使用AIGC工具辅助生成。</description>
+    </item>
+  </channel>
+</rss>
