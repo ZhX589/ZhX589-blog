@@ -27,5 +27,5 @@ Hi~ 这里是ZhX的个人博客，主要分享一些计算机、生活相关的�
 
 | 平台 | 地址 |
 | :---: | :---: |
-| 邮箱 | [ zhx589@outlook.com](mailto:zhx589@outlook.com)|
-| QQ | [ 2029837068](http://wpa.qq.com/msgrd?v=3&uin=2029837068&site=qq&menu=yes) |
+| 邮箱 | [` `zhx589@outlook.com](mailto:zhx589@outlook.com)|
+| QQ | [` `2029837068](http://wpa.qq.com/msgrd?v=3&uin=2029837068&site=qq&menu=yes) |
