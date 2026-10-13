@@ -1,5 +1,14 @@
 /* Site typography: WenKai Screen is optimized for reading on screens.
    Keep PaperMod's monospace font for code and keyboard shortcuts. */
+
+@import url("https://fontsapi.zeoseven.com/442/main/result.css");
+
+.post-content pre,
+.post-content code {
+  font-family: "Maple Mono NF CN", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-weight: normal;
+}
+
 body {
     font-family: "LXGW WenKai Screen", "霞鹜文楷", "KaiTi", "STKaiti", serif;
 }
