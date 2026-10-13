@@ -5,12 +5,14 @@
 
 .post-content pre,
 .post-content code {
-  font-family: "Maple Mono NF CN", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-weight: normal;
+    font-family: "Maple Mono NF CN", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-weight: normal;
+    font-variant-ligatures: contextual;
 }
 
 body {
-    font-family: "LXGW WenKai Screen", "霞鹜文楷", "KaiTi", "STKaiti", serif;
+    font-family: "LXGW WenKai Screen", "霞鹜文楷", 'Maple Mono NF CN', "KaiTi", "STKaiti", serif;
+    font-variant-ligatures: contextual;
 }
 
 /* Opaque fallback for browsers without backdrop-filter. */
