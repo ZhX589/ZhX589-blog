@@ -1,0 +1,31 @@
+{{- $css := resources.Get "admin/admin.css" | minify | fingerprint -}}
+{{- $vendor := slice (resources.Get "admin/js/vendor/js-yaml.min.js") (resources.Get "admin/js/vendor/marked.min.js") | resources.Concat "admin/js/vendor.js" | fingerprint -}}
+{{- $app := slice (resources.Get "admin/js/core.js") (resources.Get "admin/js/admin.js") | resources.Concat "admin/js/app.js" | fingerprint -}}
+{{- $cfg := dict
+  "owner" (site.Params.admin.owner | default "ZhX589")
+  "repo" (site.Params.admin.repo | default "ZhX589-blog")
+  "branch" (site.Params.admin.branch | default "main")
+  "workflow" (site.Params.admin.workflow | default "deploy.yml")
+  "home" site.Home.Permalink -}}
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+  {{ partial "head.html" . }}
+  <meta name="referrer" content="no-referrer">
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous">
+</head>
+<body class="admin-body">
+  <div id="admin-app">
+    <div class="admin-boot">
+      <span class="admin-spinner" aria-hidden="true"></span>
+      <span>正在加载后台…</span>
+    </div>
+  </div>
+  <noscript>
+    <div class="admin-boot">后台需要启用 JavaScript。</div>
+  </noscript>
+  <script>window.ADMIN_CONFIG = {{ $cfg | jsonify | safeJS }};</script>
+  <script defer src="{{ $vendor.RelPermalink }}" integrity="{{ $vendor.Data.Integrity }}" crossorigin="anonymous"></script>
+  <script defer src="{{ $app.RelPermalink }}" integrity="{{ $app.Data.Integrity }}" crossorigin="anonymous"></script>
+</body>
+</html>

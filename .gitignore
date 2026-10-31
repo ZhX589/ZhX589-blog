@@ -5,6 +5,8 @@ resources/
 # 依赖和缓存
 node_modules/
 .hugo_build.lock
+.admin-build*/
+.test-deps/
 
 # 系统文件
 .DS_Store

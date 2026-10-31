@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>散文 on ZhX589&#39;s Blog</title>
-    <link>https://blog.zhx589.top/categories/%E6%95%A3%E6%96%87/</link>
+    <link>http://localhost:1313/categories/%E6%95%A3%E6%96%87/</link>
     <description>Recent content in 散文 on ZhX589&#39;s Blog</description>
     <image>
       <title>ZhX589&#39;s Blog</title>
-      <url>https://blog.zhx589.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://blog.zhx589.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>http://localhost:1313/og.png</url>
+      <link>http://localhost:1313/og.png</link>
     </image>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 20 Jun 2026 01:23:18 +0800</lastBuildDate>
-    <atom:link href="https://blog.zhx589.top/categories/%E6%95%A3%E6%96%87/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/%E6%95%A3%E6%96%87/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>家乡的雨</title>
-      <link>https://blog.zhx589.top/posts/%E7%9B%BC%E9%9B%A8/</link>
+      <link>http://localhost:1313/posts/%E7%9B%BC%E9%9B%A8/</link>
       <pubDate>Fri, 19 Jun 2026 22:56:40 +0800</pubDate>
-      <guid>https://blog.zhx589.top/posts/%E7%9B%BC%E9%9B%A8/</guid>
+      <guid>http://localhost:1313/posts/%E7%9B%BC%E9%9B%A8/</guid>
       <description>&lt;blockquote&gt;&lt;p&gt;本文是之前初三在班上的习作，时随境迁，近来多有感触，想凭记忆回忆、修改一番。和回忆中的版本有所改动。&lt;/p&gt;
 &lt;/blockquote&gt;&lt;h1 id=&#34;盼雨&#34;&gt;盼雨&lt;/h1&gt;
 &lt;p&gt;我盼望着一场雨。&lt;/p&gt;

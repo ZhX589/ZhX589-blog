@@ -1,7 +1,6 @@
 baseURL = 'https://blog.zhx589.top/'
 locale = 'zh-cn'
 title = "ZhX589's Blog"
-paginate= 5
 theme = "PaperMod"
 timeZone = "Asia/Shanghai"
 publishDir = "docs"
@@ -13,6 +12,9 @@ buildExpired = false
 
 metaDataFormat = "yaml"
 hasCJKLanguage = true
+
+[pagination]
+  pagerSize = 5
 
 [minify]
   disableXML = true
@@ -28,7 +30,7 @@ hasCJKLanguage = true
   description = "ZhX589 的个人笔记，主要和计算机相关。"
   keywords = ["Blog", "计算机", "笔记"]
   author = "ZhX589"
-  images = ["<link or path of image for opengraph, twitter-cards>"]
+  images = ["/og.png"]
   DateFormat = "2006年01月02日 15:04"
   defaultTheme = "auto"
   disableThemeToggle = false
@@ -98,23 +100,21 @@ hasCJKLanguage = true
     name = "bilibili"
     url = "https://space.bilibili.com/3493262669122054"
 
-  [params.analytics]
-    [params.analytics.google]
-      SiteVerificationTag = "XYZabc"
-    [params.analytics.bing]
-      SiteVerificationTag = "XYZabc"
-    [params.analytics.yandex]
-      SiteVerificationTag = "XYZabc"
-
   [params.cover]
     hidden = true
     hiddenInList = true
     hiddenInSingle = true
 
   [params.editPost]
-    URL = "https://github.com/<path_to_repo>/content"
-    Text = "Suggest Changes"
+    URL = "https://blog.zhx589.top/admin/#/posts/edit?file=content"
+    Text = "在后台编辑"
     appendFilePath = true
+
+  [params.admin]
+    owner = "ZhX589"
+    repo = "ZhX589-blog"
+    branch = "main"
+    workflow = "deploy.yml"
 
   [params.fuseOpts]
     isCaseSensitive = false

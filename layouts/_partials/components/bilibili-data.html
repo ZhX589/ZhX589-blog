@@ -1,28 +1,38 @@
-{{- /* Server-side lookup avoids browser CORS restrictions. */ -}}
+{{- /* Prefer the checked-in snapshot in data/bilibili/ so CI builds are
+       deterministic; the public API is rate limited and may return -412.
+       Fall back to a build-time request for videos without local data. */ -}}
 {{- $data := dict -}}
-{{- $url := printf "https://api.bilibili.com/x/web-interface/view?%s=%s" .kind .id -}}
-{{- $options := dict "timeout" "8s" "key" (printf "%s-%s" $url .date) "headers" (dict "Accept" "application/json" "Referer" "https://www.bilibili.com/" "User-Agent" "Mozilla/5.0") -}}
-{{- with try (resources.GetRemote $url $options) -}}
-  {{- if .Err -}}
-    {{- warnf "Bilibili card %s: request failed; using link fallback" $.id -}}
-  {{- else -}}
-    {{- with .Value -}}
-      {{- with try (transform.Unmarshal .Content) -}}
-        {{- if .Err -}}
-          {{- warnf "Bilibili card %s: invalid response; using link fallback" $.id -}}
-        {{- else -}}
-          {{- $response := .Value -}}
-          {{- if reflect.IsMap $response -}}
-            {{- if and (eq (printf "%v" (index $response "code")) "0") (reflect.IsMap (index $response "data")) -}}
-              {{- $data = index $response "data" -}}
-            {{- else -}}
-              {{- warnf "Bilibili card %s: API declined request; using link fallback" $.id -}}
+{{- $all := hugo.Data.bilibili | default dict -}}
+{{- $key := lower .id -}}
+{{- $local := index $all $key -}}
+{{- if $local -}}
+  {{- $data = $local -}}
+{{- end -}}
+{{- if not $data -}}
+  {{- $url := printf "https://api.bilibili.com/x/web-interface/view?%s=%s" .kind .id -}}
+  {{- $options := dict "timeout" "8s" "key" (printf "%s-%s" $url .date) "headers" (dict "Accept" "application/json" "Referer" "https://www.bilibili.com/" "User-Agent" "Mozilla/5.0") -}}
+  {{- with try (resources.GetRemote $url $options) -}}
+    {{- if .Err -}}
+      {{- warnf "Bilibili card %s: request failed; using link fallback" $.id -}}
+    {{- else -}}
+      {{- with .Value -}}
+        {{- with try (transform.Unmarshal .Content) -}}
+          {{- if .Err -}}
+            {{- warnf "Bilibili card %s: invalid response; using link fallback" $.id -}}
+          {{- else -}}
+            {{- $response := .Value -}}
+            {{- if reflect.IsMap $response -}}
+              {{- if and (eq (printf "%v" (index $response "code")) "0") (reflect.IsMap (index $response "data")) -}}
+                {{- $data = index $response "data" -}}
+              {{- else -}}
+                {{- warnf "Bilibili card %s: API declined request; using link fallback" $.id -}}
+              {{- end -}}
             {{- end -}}
           {{- end -}}
         {{- end -}}
+      {{- else -}}
+        {{- warnf "Bilibili card %s: metadata unavailable; using link fallback" $.id -}}
       {{- end -}}
-    {{- else -}}
-      {{- warnf "Bilibili card %s: metadata unavailable; using link fallback" $.id -}}
     {{- end -}}
   {{- end -}}
 {{- end -}}
