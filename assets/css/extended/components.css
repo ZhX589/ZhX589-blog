@@ -153,3 +153,19 @@ a.github-card:focus-visible {
 @media (prefers-reduced-motion: reduce) {
     a.github-card { transition: none; }
 }
+
+/* 单页标题并入面包屑：正文 Markdown 的 H1 是唯一大标题。 */
+.breadcrumbs-current {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--primary);
+    font-size: 16px;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.breadcrumbs-current .entry-hint {
+    display: inline-flex;
+}
+

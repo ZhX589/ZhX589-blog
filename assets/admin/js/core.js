@@ -11,7 +11,7 @@
 
   if (!yaml) throw new Error('缺少 js-yaml，后台脚本加载顺序有误');
 
-  var FM_ORDER = ['title', 'date', 'description', 'categories', 'tags', 'draft', 'lastmod', 'slug', 'menu', 'weight', 'params'];
+  var FM_ORDER = ['title', 'date', 'description', 'license', 'categories', 'tags', 'draft', 'lastmod', 'slug', 'menu', 'weight', 'params'];
 
   function pad(n) {
     n = String(n == null ? 0 : n);

@@ -1,3 +1,20 @@
+{{- /* 机器可读许可声明：文章页输出页面许可，首页输出站点默认许可。 */ -}}
+{{- $license := partial "license/resolve.html" . -}}
+{{- with $license -}}
+  {{- with .url }}<link rel="license" href="{{ . }}">
+  {{- end -}}
+{{- end -}}
+{{- if .IsHome -}}
+  {{- with site.Params.license -}}
+    {{- with .defaultKey -}}
+      {{- $key := . -}}
+      {{- with site.Data.licenses -}}
+        {{- with index . $key }}<link rel="license" href="{{ .url }}">
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
 {{/* Load only the screen-optimized WenKai family; unicode subsets load on demand. */}}
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.7.0/lxgwwenkaiscreen.css">

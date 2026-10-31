@@ -1,0 +1,28 @@
+{{- /* 解析页面 license：返回 false（不展示）或归一化后的许可条目。 */ -}}
+{{- $raw := .Params.license -}}
+{{- if not $raw -}}
+  {{- return false -}}
+{{- end -}}
+{{- if reflect.IsMap $raw -}}
+  {{- warnf "license 字段应为字符串（页面 %s）" .Path -}}
+  {{- return false -}}
+{{- end -}}
+{{- $value := strings.TrimSpace (printf "%v" $raw) -}}
+{{- if eq $value "" -}}
+  {{- return false -}}
+{{- end -}}
+{{- /* 空格与下划线归一化为连字符；点号保留，避免版本号 4.0 变成 4-0。 */ -}}
+{{- $id := $value | lower | replaceRE `[ _]+` "-" -}}
+{{- $entry := index site.Data.licenses $id -}}
+{{- if $entry -}}
+  {{- return (dict
+    "id" $id
+    "raw" $value
+    "name" $entry.name
+    "fullName" $entry.fullName
+    "url" $entry.url
+    "spdx" $entry.spdx
+  ) -}}
+{{- end -}}
+{{- warnf "license %q 未在 data/licenses.yaml 中登记（页面 %s）" $value .Path -}}
+{{- return (dict "id" $id "raw" $value "name" $value "fullName" $value "url" "") -}}

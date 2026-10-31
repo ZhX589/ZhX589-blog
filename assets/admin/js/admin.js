@@ -709,6 +709,7 @@
           description: '',
           categories: [],
           tags: [],
+          license: (window.ADMIN_CONFIG && window.ADMIN_CONFIG.licenseDefault) || '',
           draft: true
         },
         body: '',
@@ -752,6 +753,26 @@
     updatePreview();
   }
 
+  function licenseOptions(current) {
+    var cfg = window.ADMIN_CONFIG || {};
+    var items = cfg.licenses || [];
+    var names = items.map(function (item) { return item.name; });
+    var options = [{ value: '', label: '不声明（不展示卡片）' }];
+
+    items.forEach(function (item) {
+      options.push({ value: item.name, label: item.name });
+    });
+
+    if (current && names.indexOf(current) < 0) {
+      options.push({ value: current, label: current + '（自定义）' });
+    }
+
+    return options.map(function (item) {
+      return '<option value="' + esc(item.value) + '"' +
+        (item.value === current ? ' selected' : '') + '>' + esc(item.label) + '</option>';
+    }).join('');
+  }
+
   function editorHtml(ed) {
     var isPost = ed.kind === 'post';
     var data = ed.data;
@@ -770,6 +791,10 @@
         '<datalist id="cat-list">' + categories.map(function (name) {
           return '<option value="' + esc(name) + '"></option>';
         }).join('') + '</datalist></label>';
+      meta += '<label class="admin-field">许可协议' +
+        '<select id="f-license" class="admin-select">' + licenseOptions(data.license) + '</select>' +
+        '<span class="admin-hint">留空则文章页不显示许可卡片</span>' +
+        '</label>';
     }
 
     if (!isPost && ed.isNew) {
@@ -881,6 +906,9 @@
     }
 
     if (ed.kind === 'post') bindTags(ed);
+
+    var licenseSelect = $('#f-license');
+    if (licenseSelect) licenseSelect.addEventListener('change', markDirty);
 
     $all('[data-md]').forEach(function (button) {
       button.addEventListener('click', function () { runTool(button.getAttribute('data-md')); });
@@ -1066,6 +1094,13 @@
       var originalCategories = Core.toList(ed.data.categories);
       if (category !== (originalCategories[0] || '')) data.categories = category || [];
       data.tags = ed.tags.slice();
+
+      var licenseSelect = $('#f-license');
+      if (licenseSelect) {
+        var license = licenseSelect.value.trim();
+        if (license) data.license = license;
+        else delete data.license;
+      }
     } else {
       var menu = $('#f-menu');
       if (menu && menu.checked) {

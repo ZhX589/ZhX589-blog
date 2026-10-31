@@ -1,11 +1,28 @@
 {{- $css := resources.Get "admin/admin.css" | minify | fingerprint -}}
 {{- $vendor := slice (resources.Get "admin/js/vendor/js-yaml.min.js") (resources.Get "admin/js/vendor/marked.min.js") | resources.Concat "admin/js/vendor.js" | fingerprint -}}
 {{- $app := slice (resources.Get "admin/js/core.js") (resources.Get "admin/js/admin.js") | resources.Concat "admin/js/app.js" | fingerprint -}}
+{{- $licenses := slice -}}
+{{- with site.Data.licenses -}}
+  {{- range $key, $value := . -}}
+    {{- $licenses = $licenses | append (dict "key" $key "name" $value.name) -}}
+  {{- end -}}
+{{- end -}}
+{{- $defaultLicense := "" -}}
+{{- with site.Params.license -}}
+  {{- with .defaultKey -}}
+    {{- $key := . -}}
+    {{- with site.Data.licenses -}}
+      {{- with index . $key -}}{{- $defaultLicense = .name -}}{{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
 {{- $cfg := dict
   "owner" (site.Params.admin.owner | default "ZhX589")
   "repo" (site.Params.admin.repo | default "ZhX589-blog")
   "branch" (site.Params.admin.branch | default "main")
   "workflow" (site.Params.admin.workflow | default "deploy.yml")
+  "licenses" $licenses
+  "licenseDefault" $defaultLicense
   "home" site.Home.Permalink -}}
 <!DOCTYPE html>
 <html lang="zh-CN" data-theme="auto">

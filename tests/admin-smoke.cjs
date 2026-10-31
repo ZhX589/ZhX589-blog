@@ -28,7 +28,9 @@ w.ADMIN_CONFIG = {
   repo: 'ZhX589-blog',
   branch: 'main',
   workflow: 'deploy.yml',
-  home: 'https://blog.zhx589.top/'
+  home: 'https://blog.zhx589.top/',
+  licenses: [{ key: 'cc-by-nc-sa-4.0', name: 'CC-BY-NC-SA 4.0' }],
+  licenseDefault: 'CC-BY-NC-SA 4.0'
 };
 
 const postDir = path.join(root, 'content/posts');
@@ -181,6 +183,7 @@ function check(condition, label) {
   w.location.hash = '#/posts/new';
   await wait(150);
   check(!!w.document.querySelector('#f-title'), '打开新建文章编辑器');
+  check(w.document.querySelector('#f-license').value === 'CC-BY-NC-SA 4.0', '新建文章默认选中 CC-BY-NC-SA 4.0');
   w.document.querySelector('#f-title').value = '冒烟新文章';
   w.document.querySelector('#f-body').value = '# 冒烟\n\n正文内容。';
   w.document.querySelector('[data-action="publish"]').click();
@@ -189,8 +192,10 @@ function check(condition, label) {
   check(!!newPut, '新建文章发起 PUT');
   if (newPut) {
     const payload = JSON.parse(newPut.body);
+    const saved = Buffer.from(payload.content, 'base64').toString('utf8');
     check(payload.message.includes('发布文章《冒烟新文章》'), '新文章提交信息正确');
     check(decodeURIComponent(newPut.url).includes('/contents/content/posts/'), '新文章写入 content/posts');
+    check(saved.includes('license: CC-BY-NC-SA 4.0'), '新文章写入默认许可');
   }
 
   // 新建草稿应带 [skip ci]

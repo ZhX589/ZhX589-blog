@@ -1,0 +1,23 @@
+{{- $page := . -}}
+{{- $license := partial "license/resolve.html" $page -}}
+{{- with $license -}}
+  {{- $author := $page.Params.author | default site.Params.author | default site.Title -}}
+  <aside class="license-card" aria-label="许可协议">
+    <div class="license-card-title">
+      {{ partial "components/icon.html" "license" }}
+      <span>许可协议</span>
+    </div>
+    <p class="license-card-text">
+      本文《{{ $page.Title }}》由 {{ $author }} 创作，采用
+      {{- if .url }}
+      <a rel="license noopener" href="{{ .url }}" target="_blank" title="{{ .fullName | default .name }}">{{ .name }}</a>
+      {{- else }}
+      <span>{{ .name }}</span>
+      {{- end }} 授权。
+    </p>
+    <p class="license-card-meta">
+      <a href="{{ $page.Permalink }}">原文链接</a>
+      {{- with .url }} · <a rel="license noopener" href="{{ . }}" target="_blank">查看许可协议</a>{{ end }}
+    </p>
+  </aside>
+{{- end -}}

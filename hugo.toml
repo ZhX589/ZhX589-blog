@@ -110,6 +110,9 @@ hasCJKLanguage = true
     Text = "在后台编辑"
     appendFilePath = true
 
+  [params.license]
+    defaultKey = "cc-by-nc-sa-4.0"
+
   [params.admin]
     owner = "ZhX589"
     repo = "ZhX589-blog"

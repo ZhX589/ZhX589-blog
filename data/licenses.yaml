@@ -1,0 +1,7 @@
+# 文章许可注册表：卡片、首页声明与后台下拉的唯一数据源。
+# 键是归一化后的稳定标识（小写，空格/点/下划线归一化为连字符）。
+cc-by-nc-sa-4.0:
+  name: "CC-BY-NC-SA 4.0"
+  fullName: "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International"
+  url: "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans"
+  spdx: "CC-BY-NC-SA-4.0"

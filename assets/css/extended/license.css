@@ -1,0 +1,60 @@
+/* 文章许可卡片与首页默认许可声明。 */
+.license-card {
+  margin: 24px 0;
+  padding: 20px 24px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--code-bg);
+  color: var(--content);
+  font-size: 0.95em;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+:root[data-theme="dark"] .license-card {
+  background: #16171a;
+}
+
+.license-card-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.license-card-text {
+  margin: 0 0 8px;
+}
+
+.license-card-meta {
+  margin: 0;
+  color: var(--secondary);
+  font-size: 0.9em;
+}
+
+.license-card a {
+  text-underline-offset: 0.25rem;
+}
+
+.license-card a:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.footer-license {
+  margin: 0 0 6px;
+}
+
+@media (max-width: 480px) {
+  .license-card {
+    padding: 18px;
+  }
+}
+
+@media print {
+  .license-card {
+    break-inside: avoid;
+  }
+}
